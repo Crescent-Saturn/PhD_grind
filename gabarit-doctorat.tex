@@ -1,0 +1,124 @@
+%% GABARIT POUR THÈSE STANDARD
+%%
+%% Consulter la documentation de la classe ulthese pour une
+%% description détaillée de la classe, de ce gabarit et des options
+%% disponibles.
+%%
+%% [Ne pas hésiter à supprimer les commentaires après les avoir lus.]
+%%
+%% Déclaration de la classe avec le type de grade
+%%   [l'un de LLD, DMus, DPsy, DThP, PhD]
+%% et les langues les plus courantes. Le français sera la langue par
+%% défaut du document.
+\documentclass[PhD,french,english, 12pt]{ulthese}
+  %% Encodage utilisé pour les caractères accentués dans les fichiers
+  %% source du document. Les gabarits sont encodés en UTF-8. Inutile
+  %% avec XeLaTeX, qui gère Unicode nativement.
+  \ifxetex\else \usepackage[utf8]{inputenc} \fi
+
+  %% Charger ici les autres paquetages nécessaires pour le document.
+  %% Quelques exemples; décommenter au besoin.
+  \usepackage{amsmath}       % recommandé pour les mathématiques
+  \usepackage{ncccomma}      % gestion de la virgule dans les nombres
+  \usepackage{pdfpages}
+  %% Utilisation d'une autre police de caractères pour le document.
+  %% - Sous LaTeX
+  %\usepackage{mathpazo}      % texte et mathématiques en Palatino
+  %\usepackage{mathptmx}      % texte et mathématiques en Times
+  %% - Sous XeLaTeX
+  %\setmainfont{TeX Gyre Pagella}      % texte en Pagella (Palatino)
+  %\setmathfont{TeX Gyre Pagella Math} % mathématiques en Pagella (Palatino)
+  %\setmainfont{TeX Gyre Termes}       % texte en Termes (Times)
+  %\setmathfont{TeX Gyre Termes Math}  % mathématiques en Termes (Times)
+
+\graphicspath{{./graph/}}               % Images folders
+\DeclareGraphicsExtensions{.jpg,.png,.pdf,.eps}
+
+  %% Gestion des hyperliens dans le document. S'assurer que hyperref
+  %% est le dernier paquetage chargé.
+  \usepackage{hyperref}
+  \hypersetup{colorlinks,allcolors=ULlinkcolor}
+
+  %% Options de mise en forme du mode français de babel. Consulter la
+  %% documentation du paquetage babel pour les options disponibles.
+  %% Désactiver (effacer ou mettre en commentaire) si l'option
+  %% 'nobabel' est spécifiée au chargement de la classe.
+  \frenchbsetup{%
+    StandardItemizeEnv=true,       % format standard des listes
+    ThinSpaceInFrenchNumbers=true, % espace fine dans les nombres
+    og=«, fg=»                     % caractères « et » sont les guillemets
+  }
+
+  %% Style de la bibliographie.
+  \setcitestyle{authoryear, square}
+  \bibliographystyle{plainnat}
+
+  %% Déclarations des pages de titre. Remplacer les éléments entre < >.
+  %% Supprimer les caractères < >. Couper un long titre ou un long
+  %% sous-titre manuellement avec \\.
+  \titre{Application of infrared thermography in maintaining the ``cold chain" \&\& Exploration of cold approach in infrared thermography for Non-Destructive Testing}
+  % \titre{Ceci est un exemple de long titre \\
+  %   avec saut de ligne manuel}
+  % \soustitre{Sous-titre le cas échéant}
+  % \soustitre{Ceci est un exemple de long sous-titre \\
+  %   avec saut de ligne manuel}
+  \auteur{Lei Lei}
+  \annee{2018}
+  \programme{Doctorat en génie électrique}
+  \direction{Xavier P.V. Maldague, directeur de recherche}
+  % \codirection{<Prénom Nom>, <codirecteur ou codirectrice> de recherche}
+  % \codirection{<Prénom Nom>, <codirecteur ou codirectrice> de recherche \\
+  %              <Prénom Nom>, <codirecteur ou codirectrice> de recherche}
+
+\begin{document}
+
+\frontmatter                    % pages liminaires
+
+\pagestitre                     % production des pages de titre
+
+\include{main/resume}                % résumé français
+\include{main/abstract}              % résumé anglais
+\cleardoublepage
+
+\tableofcontents                % production de la TdM
+\cleardoublepage
+
+\listoftables                   % production de la liste des tableaux
+\cleardoublepage
+
+\listoffigures                  % production de la liste des figures
+\cleardoublepage
+
+\dedicace{For Steven \& Alice}
+\cleardoublepage
+
+\epigraphe{A minute's success pays the failure of years.}{Robert Browning}
+\cleardoublepage
+
+\include{main/remerciements}         % remerciements
+\include{main/avantpropos}           % avant-propos
+
+\mainmatter                     % corps du document
+
+\include{main/introduction}          % introduction
+\include{main/chapitre1}             % chapitre 1
+\include{main/chapitre2}             % chapitre 2, etc.
+
+%\includepdf[pages=-]{Prop_these_lei}
+
+\include{main/chapitre3}
+\include{main/chapitre4}
+%\includepdf[pages=-]{Revised_Version_2}
+%\includepdf[pages={2-11}]{Lei2017Detection}
+%\includepdf[pages=-]{Thermosense2017_Lei}
+
+\include{main/conclusion}            % conclusion
+
+
+\appendix                       % annexes le cas échéant
+
+\include{main/annexe}                % annexe A
+
+\bibliography{//gel.ulaval.ca/Vision/Usagers/lelei/Desktop/Bibliography/Biblio_th}                 % production de la bibliographie
+
+\end{document}
