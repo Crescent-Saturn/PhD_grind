@@ -1,3 +1,159 @@
 \chapter{State of the art}     % numéroté
 
-Texte du chapitre.
+\section*{Infrared thermography for NDT \& E}
+In the past few decades, a Nondestructive Testing \& Evaluation (NDT\&E) technique: Infrared Thermography (IT), also commonly referred as \textit{Thermal imaging}, or \textit{thermography}, has received growing attention and applications for diagnostics. This is due to its characteristics that ``it allows the mapping of thermal patterns, i.e. thermograms, on the surface of objects, bodies, or systems through the use of an infrared imaging instrument, such as an infrared camera" \citep{maldague3introduction}. Besides, its impressive quickness and convenience, the inspection attracted a wide variety of applications including biological, civil engineering, aerospace, cultural heritage, etc \citep{2007-Ibarra-Castanedo,2000-Li,cielo1987thermographie,shoja2011inspection,pradere2009microscale,avdelidis2004applications,maierhofer2005quantitative}. Other utilization such evaluation or measurements of heat transfer coefficients (or absorption) can be found in \citep{dragano2009experimental,grinzato2010r,grinzatoquality,grinzato1comparison,rossi2009k}.
+
+Infrared thermography is often divided into two approaches: passive thermography, in which materials and structures are naturally at different temperature than the environment; and active thermography, in which an external simulation is added to induce a thermal response \citep{Maldague2001theory}. The two approaches are described in next two sections.
+\section{Passive thermography}
+This approach is due to the principle of energy conservation and states that an important quantity of heat is released by any process consuming energy because of the law of entropy, which is known as \textit{the First law of thermodynamics} \citep{thdy1}. 
+
+Therefore, the passive thermography is often qualitative, such as the diagnosis of the presence of a given abnormality or hot spot with respect to the immediate surroundings.  A delta-T of a few degrees (> 5°C) is generally
+found suspicious while greater values indicate strong evidences of abnormal behaviors. Some applications in civil engineering can be found in \citep{2000-Li,stanley1994non,lo2004building}, where the thermography approach was proved to be reliable in detecting the debonded ceramic tiles on a building finish, and a temperature contours over the surface of a target object to provide an appropriate measure of the damaged building or structure has been mapped. The inspection of buildings, for different purposes such as energy monitoring, moisture mapping and many others, has also been widely deployed \citep{laranjeirapassive,bison1993automatic,bison2012geometrical}. 
+
+\section{Active thermography}
+Contrary to ``\textit{Passive}", the word ``\textit{Active}" seems more progressive. Thus might be the reason why this technique finds a large number of applications in NDT. The experimental configuration for active infrared thermography can be seen in Fig \ref{exp_active} \citep{sfarra2010comparative}. 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.4]{art/exp_active}
+	\caption{Experimental setup for the active thermography}
+	\label{exp_active}
+\end{figure}
+where \textcircled{1} are two different stimulation sources. They can be located in the same side of the camera, which is known as \textit{reflection} mode; or in the opposite side of the camera, which is known as \textit{transmission} mode.  \textcircled{2} is the specimen under test, \textcircled{3} is the IR camera for recording, and \textcircled{4} is the PC for processing. The whole system is connected by a synchronization control.
+
+Practically, \textit{any} form of energy can be used to produce a measurable thermal contrast. In addition, since the external stimulation can be accurately controlled, quantitative procedure is possible. 
+
+\subsection*{Excitation methods}
+Generally, energy used as the external resources can be delivered by the following mechanisms:
+\begin{itemize}
+	\item Conduction: heating blanket, hot bag or cool bags (as snow or ice);
+	\item Convection: Hot (or cold) water (or gas(air));
+	\item Radiation: Lamps, flashes, infrared heaters;
+	\item Mechanical stimulation: ultrasonic vibration;
+\end{itemize}
+Even though ``any" form of energy can be used, the heating sources are often preferred. They can be commonly divided as {ibarra2013infrared}:
+\begin{itemize}
+	\item optical: Photographic flashes or lamps are utilized, known as \textit{Pulsed Thermography} (sometimes even using laser as heating resource \citep{suzuki2002application,burrows2007combined}). When using periodic heating at a given frequency to measure the amplitude and (or) phase delay  of the thermal response, that is known as \textit{Lock-in thermography} \citep{wu1998lock,duan2013quantitative,2007-Ibarra-Castanedo};
+	\item mechanical: Sound or ultrasound waves are injected to the specimen to produce heat by friction, known as \textit{Vibrothermography} \citep{2007-ClementeIbarra-Castanedo,2007-Ibarra-Castanedo};
+	\item induction: Eddy currents are generated by a coil inside the specimen \citep{riegert2004lockin,zenzinger2007thermographic}. This type of heating source is limited to conductive materials;
+	\item microwave: Heat is introduced into the specimen by a time-gated microwave source \citep{myers1979microwave,land1987clinical};
+\end{itemize}
+Since the main technique in this work is using the excitation method, \textit{Pulsed Thermography} will be presented in details in the following sections \citep{Maldague2001theory,ibarra2013infrared}.
+\subsection{Pulsed Thermography}
+%In this technique, the specimen surface is submitted to a heat pulse generated by a high power and fast heat source such as flashes. Then the thermal front propagates under the surface by diffusion. Then as time passes, the surface temperature decreases uniformly for a piece without any defects. While on the contrary,  the diffusion rate can be changed and abnormal temperature patterns will be produced at the subsurface, by any kind of surface discontinuities (such as air leakage, delaminations, thermal bridges, porosity, inclusions, etc.). The detection of these discontinuities  with an IR camera depends on their sizes.
+
+Pulsed thermography (PT) is one of the most popular thermal stimulation method in IR thermography. One reason for this popularity is the quickness of the inspection relying on a thermal stimulation pulse, with duration going from a few ms for high thermal conductivity material inspection (such as metal parts) to a few seconds for low thermal conductivity specimens (such as plastics, graphite epoxy components \citep{Maldague1993Nondestructive,Maldague1994bInfra}). Such quick thermal stimulation allows direct deployment on the plant floor with convenient heating sources. Moreover, the brief heating prevents damage to the component (heating is generally limited to a few degrees above the initial component temperature).
+
+Basically, PT consists of briefly heating the specimen and then recording its temperature decay curve. Qualitatively, the phenomenon is as follows. The temperature of the material first rises during the pulse. After the pulse, it then decays because the energy - the thermal front - propagates by diffusion under the surface. Later, the presence of a subsurface defect (example: a disbonding) reduces the diffusion rate so that when observing the surface temperature, such a subsurface defect appears as an area of higher temperature with respect to the surrounding sound area. In fact in such a case the reduced diffusion rate caused by the subsurface defect presence translates into “heat accumulation” and hence higher surface temperature just over the defect. Moreover, such phenomenon occurs in time so that, deeper defects are observed later and with a reduced “diluted” or “spread” thermal contrast.
+
+Theoretically, the 1D solution of the \textit{Fourier} equation for the propagation of a \textit{Dirac} heat pulse through a semi-infinite homogeneous material is given by \citep{carslaw1986heat}:
+\begin{equation}
+T(z,t) = T_0 + \frac{Q}{\sqrt{k\rho C_p \pi t}}exp(-\frac{z^2}{4\alpha t})
+\end{equation}
+where $Q$ is the energy absorbed, $T_0$  is the initial temperature, $k$ the conductivity of the material, $C_p$ the heat capacity at constant pressure and $\alpha$ thermal diffusivity.
+
+Thus, at the surface ($z=0$), one has:
+\begin{equation}
+T(0,t) = T_0 + \frac{Q}{\sqrt{k\rho C_p \pi t}}=T_0 + \frac{Q}{e\sqrt{\pi t}}
+\end{equation}
+where $e=\sqrt{k\rho C_p}$ is defined as the thermal effusivity, which measures the material ability to exchange heat with its surroundings. Therefore, surface temperature will decay as a function of $t^{1/2}$.
+
+\noindent The energy source can be applied in various ways:
+\begin{description}
+	\item \textbf{Point inspection}: heating with a laser or a focused light beam; advantages: repeatable heating, uniformity; drawback: the necessity to move the inspection head to fully inspect a surface slows down the inspection process.
+	\item \textbf{Line inspection}: heating using line lamps, heated wire, scanning laser, line of air jets (cool or hot); advantages: fast inspection rate (up to 1 $m^2/s$) and good uniformity thanks to the lateral motion; drawback: only part of the temperature history curve is available due to the lateral motion of the specimen and the fixed distance between thermal stimulation and temperature signal pick-up. Projection of a series of line heating strips is also used to detect surface cracks.
+	\item \textbf{Surface inspection}: heating using lamps, flash lamps, scanning laser; advantages: the complete analysis of the phenomenon is possible since the whole temperature history curve is recorded; drawback: concerns about non-uniformity of the heating (lamps, flashes, heat gun, laser, microwave).
+\end{description}
+
+If the temperature of the part to inspect is already higher than ambient temperature, it can be of interest to make use of a cold thermal source such as a line of air jets (or water jets; sudden contact with ice, snow, etc.). In fact, a thermal front propagates the same way whether being hot or cold: what is important is the temperature differential between the thermal source and the specimen. An advantage of a cold thermal source is that it does not induce spurious thermal reflections into the IR camera as in the case of a hot thermal source. The main limitations of cold stimulation sources are related to practical considerations as for instance it is generally easier and more efficient, to heat rather then to cool a part. For this reason, our work on cold stimulation needs to be investigated in detail and better understood.
+
+\subsection{Step Heating}
+When the specimen is  continuously heated, the increase of surface temperature is monitored during the application of a stepped heating pulse, thus the principle of \textit{Step Heating}. Same as in pulsed thermography, variations of surface temperature with time are related to specimen features. So it can be called \textit{Long pulse}. Besides, it is also referred as  time-resolved  infrared radiometry (TRIR) \citep{spicer1992time}.  More details can be found in \citep{ibarra2013infrared,osiander1998thermal}
+
+\subsection{Lock-in Thermography}
+Lock-in thermography (LT) is based on thermal waves generated inside the inspected specimen and detected remotely. Wave generation is for instance performed by periodically depositing heat on the specimen surface (e.g. through sine-modulated lamp heating) while the resulting oscillating temperature field in the stationary regime is remotely recorded through its thermal infrared emission \citep{wu1998lock}.
+
+The lock-in terminology refers to the necessity to monitor the exact time dependence between the output signal and the reference input signal (i.e. the modulated heating). This is done with a locking amplifier in a point by point laser heating or by computer in full-field (lamp) deployment so that both phase and magnitude images becomes available. Phase images are related to the propagation time and since they are relatively insensitive to local optical surface features (such as non uniform heating), they are interesting for NDE purposes. The depth range of images is inversely proportional to the modulation frequency so that higher modulation frequencies restrict the analysis in a near surface region \citep{Maldague2001theory}.
+
+\subsection{Vibrothermography}
+Known as \textit{Ultrasound thermography} \citep{dillenz2001progress}, vibrothemography (VT) is an active Infrared Thermography technique based on that principle: under the effect of mechanical vibrations (0 to 25 kHz) induced externally to the structure, thanks to direct conversion from mechanical to thermal energy, heat is released by friction precisely at locations where defects such as cracks and delaminations are located.
+
+Ultrasonic waves are ideal for NDT in the sense that, defect detection is independent from of its orientation inside the specimen, and both internal and open surface defects can be detected. Thus, VT is very useful for the detection of cracks and delaminations. The range for ultrasonic waves is often between 20 kHz and 1 MHz. Unlike electromagnetic waves, mechanical elastic waves such as sonic and ultrasonic waves can not propagate in a vacuum. They require a medium for traveling. They travel faster in solids and liquids than the air. This indicates an important aspect of VT: the common approach in VT is to use a coupling media between a transducer and the specimen to reduce losses. Therefore, one of the Infrared thermography characteristic ``contactless" is meaningless in this technique. However, image acquisition can still be carried out from a distance using an IR camera.
+
+\section{Advantages and limitations of infrared thermography}
+As every coin has two sides, all technique has its strengths and weaknesses. For Infrared thermography, its advantages are as follows \citep{maldague3introduction, Maldague2001theory}:
+\begin{itemize}
+	\item Fast, surface inspection
+	\item Ease of deployment
+	\item Contactles, no coupling needed as in the case of conventional ultrasounds.
+	\item Security, there's no damaging radiation.
+	\item Easy access to results thanks to the imaging capabilities.
+	\item Numerous applications.
+	\item Unique inspection tool in some tasks.
+\end{itemize}
+While, on the other hand, some limitations specific are evident:% \citep{maldague3introduction, Maldague2001theory}:
+\begin{itemize}
+	\item Non-uniform heating, when over a large surface.
+	\item Emissivity differs from materials.
+	\item Defects detected are generally shallow.
+	\item Thermal losses, absorption by the environment.
+	\item Inspected thickness of material under the surface has a limitation.
+	\item Cost of the apparatus.
+\end{itemize}
+
+\section{Recent research on cold approach}
+The first mention of this technique was found in \citep{Maldague1993Nondestructive,Maldague1994bInfra}, where a filament-wound graphite-epoxy tank was tested by TNDT using a liquid nitrogen spray to identify defects and bonded Al structures were inspected  in a thermographical \textit{reflection} procedure by propagation of a cold front (cool air jet) Shown in Fig \ref{Al_stru_cold}. 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.81]{art/Al_stru_cold}
+	\caption{Thermographic inspection by propagation of a cold front for the inspection of bonded Al structures.}
+	\label{Al_stru_cold}
+\end{figure}
+In the latter's thermal image, the structure is initially at a temperature of some 10°C above room temperature and a line
+of air jets is used to quickly cool the inspected area. The image shows the hotter central area which corresponds to the bonded area (oriented vertically on the thermogram). The cooler region at the center of the bonding line reveals a bonding defect (lack of adhesive).
+Another example of stimulation by propagation of a cool front in the same mode on an Al-foam panel was also presented in \citep{Maldague1993Nondestructive}(Fig \ref{Al_foam_hc}).
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.90]{art/Al_foam_hc}
+	\caption{Thermographic inspection using a line of air jets with pre-heating then cooling.}
+	\label{Al_foam_hc}
+\end{figure}
+In this case, it is necessary to detect an non-bonded area in a Al-foam laminate. The panel is first uniformly heated at a temperature of about 10$°C$ above room temperature. The surface is then cooled by a line of cool air jets during the lateral moving of the panel (at a constant speed of 2.4 $cm/s$). In the figure, two thermograms are shown, one for a sound area and one for an area where a circular-shaped disbonding (4 cm diameter) is present. The defect is clearly visible at the image
+center. 
+Besides, after comparing  the radiative-heat injection and convection-heat removal approach in \citep{Maldague1993Nondestructive}. They found that, a reduced thermal contrast is obtained with the cool air stimulation due to both the reduced heat capacity of air and the smaller temperature differential between the thermal perturbing source and the inspected surface (case of air versus high temperature radiative source). 
+
+Other applications have then been made during the past decades in several domains. \citep{endohdynamical2012} proposed constructing an active thermographic imaging system, in which a cooling material contacts the surface and scans over a welded zone of two stainless plates (Fig \ref{endoh_fig}).
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=1]{art/endoh_axe}\\
+	\includegraphics[scale=1]{art/endoh_lat}
+	\caption{ Experimental setup (a) Axial movement, (b) lateral movement of a coolant material.}
+	\label{endoh_fig}
+\end{figure}
+They recorded both a time-varying thermographic image and a real-time response of each pixel. The results are exhibited in Fig \ref{endoh_res_1}, \ref{endoh_res_2}.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=0.9]{art/endoh_res_1}
+	\caption{(a)Thermal image, (b) temperature profile along A-A’ line, (c) temperature profile along B-B’ line (v=10$mm/s$).}
+	\label{endoh_res_1}
+\end{figure}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=1.0]{art/endoh_res_2}
+	\caption{(a)Thermal image, (b) temperature profile along A-A’ line (v=50$ mm/s$).}
+	\label{endoh_res_2}
+\end{figure}
+
+In both two cases of scanning (v= 10 and v=50 $mm/s$), it is observed that the locally high-temperature appears in low-temperature region of the simulated welding region. For axial movement of coolant material, the heat inside and the surface of the specimen transfers toward the interface surface of the specimen to the coolant, due to conservation of the axial symmetry of heat transfer. However, for lateral movement of coolant, it was squeezed for the spatial distribution of the temperature along the direction of coolant movement. Therefore, an elliptical shape of temperature distribution was obtained.
+
+In \citep{2012-LewisHom} a custom, microfluidic  heat  sink  with  an  IR-transparent working  fluid  (0.75  LPM)  was  manufactured  to  cool  an instrumented test chip while permitting optical access for IR thermal imaging.  Then a detailed system calibration was conducted to account for the temperature-dependent optical properties of the chip and heat sink. Their experiments  confirm  that  the  dynamic  range  of  the infrared  microscope  can  be  greatly  enhanced  by decreasing the  thickness  of  the  liquid  layer. \citep{rodriguez2014cooling} deployed an thermographic test to the detection of subsurface cracks in welding. The procedure started with the thermal excitation of the material, following with the monitoring of the cooling process with infraRed thermography. They used the natural convection between the material and the environment, but two method of heating were deployed in to same specimen. One is heating from the front surface (Method 1), the other is heating from back surface (Method 2). 
+
+\begin{figure}
+	\hspace{-45pt}
+%	\centering
+	\includegraphics[scale=0.65]{art/cooling_res}
+	\caption{Thermal images of each defect for two methods Natural convection cooling}
+	\label{cooling_res}
+\end{figure}
+
+The experimental results (Fig \ref{cooling_res}) have shown that the technique has a potential to detect hidden flaws due to the influence of the physical differences between the defect and the non-defect area in the cooling parameters. But the results depended on the depth of defect: ``Greater depths require larger heating and greater ranges of precision in thermographic data acquisitions". Still, the limitation of that proposed method in this literature is only by natural convection. %Our work will apply the forced convection by spraying the nitrogen gas.
+
