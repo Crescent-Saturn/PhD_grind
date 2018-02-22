@@ -116,11 +116,18 @@ where $U$ is an $M\times N$ unitary matrix, $R$ is a diagonal $N \times N$ matri
 
 The 3D thermogram matrix needs to be reorganized as a 2D $M\times N$ matrix $A$ with the dimension of time along the columns and space. The columns of $U$ represent a set of orthogonal statistical modes known as Empirical
 Orthogonal Functions (EOFs) which describe the data spatial variations, while the time variations are represented by the Principal Components (PCs) which are arranged row-wise in matrix $V_T$. Then applying the SVD to the 2D matrix, the resulting U matrix, providing the spatial information, can be rearranged as a 3D sequence \citep{Ibarra-Castanedo2006}. Whole procedure is illustrated in Fig. \ref{PCT_SVD}.
-\begin{figure}[!ht]
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.8]{art/PCT_SVD_1}\\
-	\includegraphics[scale=0.8]{art/PCT_SVD_2}
-	\caption{Thermographic data rearrangement from a 3D sequence to a 2D matrix (up) and rearrangement of a 2D matrix into a 3D matrix containing the EOFs (down)}
+	\subfloat[Thermographic data rearrangement from a 3D sequence to a 2D matrix]
+	{
+		\includegraphics[scale=0.7]{art/PCT_SVD_1}
+	}
+	\\
+	\subfloat[Rearrangement of a 2D matrix into a 3D matrix containing the EOFs]
+	{
+		\includegraphics[scale=0.7]{art/PCT_SVD_2}
+	}
+	\caption{PCT algorithm procedure}
 	\label{PCT_SVD}
 \end{figure}
 
@@ -149,4 +156,4 @@ The advantages of using COMSOL Multiphysics for modeling:
 	\item COMSOL Multiphysics innovated extended multiphysics--coupling between logically distinct domains and models that permits simultaneous solution.
 \end{itemize}
 
-All the simulation parameters and conditions can be found in corresponding chapters.
+All simulation parameters and conditions can be found in corresponding chapters.
