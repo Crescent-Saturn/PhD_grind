@@ -100,11 +100,32 @@ In a general way, as: %with degree $n$:
 \begin{equation}
 \log (\Delta T) = a_0 + a_1\log (t) + a_2[\log (t)]^2 +...+ [a_n\log(t)]^n
 \end{equation}
-This technique usually consists in the fitting of the experimental log-log plot by a polynomial of degree $n$, and also the computation of the 1$^{st}$ and 2$^{nd}$ derivatives of the thermograms.
+This technique usually consists in the fitting of the experimental log-log plot by a polynomial of degree $n$, and also in the computation of the 1$^{st}$ and 2$^{nd}$ derivatives of the thermograms.
 
+In practice, logarithmic data may vary from ideal one-dimensional behavior for a variety of reasons (e.g. material inhomogeneities, nonlinear camera response or background radiation contributions). Nevertheless, the logarithmic behavior exhibits remarkable consistency, in that pixels representing defect free areas are nearly linear, and pixels corresponding to subsurface defects depart from the near-linear signature at a particular time that is correlated to the depth of the defect \citep{Shepard2002,Shepard2003}.
 
 
 \subsection{Principal Component Thermography (PCT)}
+Principal Component Analysis (PCA) is a statistical analysis tool used for identifying patterns in data and expressing the data in a way to highlight the similarities and differences in patterns. When data dimension is very high, the pattern matching of the data then becomes very difficult. Thus, PCA comes to extract features and reduce redundancy by projecting the data onto a system of orthogonal components, which is known as PCT \cite{Rajic2002,Rajic2002a}. 
+
+Singular Value Decomposition (SVD) is often used in PCA. Generally, a matrix $M$ of $m\times n$ can be decomposed in the form of:
+\begin{equation}
+A = U R V^T
+\end{equation}
+where $U$ is an $M\times N$ unitary matrix, $R$ is a diagonal $N \times N$ matrix with non-negative real numbers on the diagonal, $V$ is an $N\times N$ unitary matrix, and $V^T$ is the conjugate transpose of $V$.
+
+The 3D thermogram matrix needs to be reorganized as a 2D $M\times N$ matrix $A$ with the dimension of time along the columns and space. The columns of $U$ represent a set of orthogonal statistical modes known as Empirical
+Orthogonal Functions (EOFs) which describe the data spatial variations, while the time variations are represented by the Principal Components (PCs) which are arranged row-wise in matrix $V_T$. Then applying the SVD to the 2D matrix, the resulting U matrix, providing the spatial information, can be rearranged as a 3D sequence \citep{Ibarra-Castanedo2006}. Whole procedure is illustrated in Fig. \ref{PCT_SVD}.
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.8]{art/PCT_SVD_1}\\
+	\includegraphics[scale=0.8]{art/PCT_SVD_2}
+	\caption{Thermographic data rearrangement from a 3D sequence to a 2D matrix (up) and rearrangement of a 2D matrix into a 3D matrix containing the EOFs (down)}
+	\label{PCT_SVD}
+\end{figure}
+
+Beyond reducing redundancy, PCT is also proposed as a contrast enhancement approach.
+The entire results obtained in this thesis are mostly post-processed by PCT method.
 
 \subsection{Receiver Operating 	Characteristic (ROC)}
 The Receiver operating characteristic (ROC) curve is a technique in statistics which helps visualize, organize and select classifiers based on their performance. The curve graph is created by plotting the the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings. More details about concepts and definitions can be found in \citep{Fawcett2006}. While being frequently chosen a standard method in several scientific fields, ROC are rarely applied in the thermographic field.\citep{Bison2014a} 
