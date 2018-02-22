@@ -1,0 +1,131 @@
+\section{Issue, hypothesis and objectives}
+\subsection{Issue}
+
+\subsection{Hypothesis}
+
+\subsection{Objectives}
+
+
+
+
+\section{Methodology}
+Thought infrared thermography has the advantages such as fast inspection, ease of deployment, contactless, security and easy access to results with the imaging capabilities, raw infrared thermography results is difficult to handle and analyze in case of reflections and non-uniform external stimulation. To improve the inspection results, there are various post-processing techniques which have been developed. The recently popular data analyzing and processing methods are presented in detail in the following subsections.
+\subsection{Fourier Transform (FT)}
+Among all data processing methods, Fourier Transform (FT) is especial because it helps retrieve phase and amplitude data from raw results, since our principal results are images, which can be seen as signals with two dimensions.
+
+It is well-known that any wave form, periodic or not, can be approximated by the sum of purely harmonic waves oscillating at different frequencies. The Continuous Fourier Transform (CFT) is then given by:
+\begin{equation}
+F(\omega) = \int_{-\infty}^{\infty}f(t)e^{-j\omega t}dt = A(\omega)e^{i\phi(\omega)}
+\end{equation}
+where $\omega = 2 \pi f$. the FT technique serves to transform the perception of signal from a time-based domain to a frequency-based domain.
+
+In case of discrete situation, the Discrete Fourier Transform (DFT) is possible to analyze the data in the frequency domain:
+\begin{equation}
+F_n = \Delta t \sum_{k=0}^{N-1}T(k\Delta t)e^{-\tfrac{i2\pi nk}{N}} = \Re(F_n) + i\Im(F_n)
+\label{DFT}
+\end{equation}
+where $n$ designates the frequency increment ($n=0, 1, ..., N$), $\Delta t$ is the sampling interval, $N$ is the total number of infrared images, and $\Re$ and $\Im$ are the real and the imaginary parts of the transform, respectively.
+DFT is often applied in Pulsed Phase Thermography (PPT), which analyzes phase data obtained from PT results. In addition, the Fast Fourier Transform (FFT) algorithm is often applied to reduce computation time.
+
+\subsection{PPT}
+From Eq.\ref{DFT}, amplitude $A_n$ and phase delay $\Phi_n$ are given by:
+\begin{equation}
+A_n = \sqrt{\Re(F_n)^2 + \Im(F_n)^2} \qquad \Phi_n = \tan^{-1}\frac{\Re(F_n)}{\Im(F_n)}
+\end{equation}
+It should be noted here that The processed sequence is less affected than the original data by undesired noise
+sources such as environmental reflections, emissivity variations, non-uniform heating.
+
+By selecting two pixels, the first in correspondence of a reference zone, the second in correspondence of a possible defect zone, and following both of them in time, after the pulse, the two profiles shown in Fig. \ref{T_profile_PPT} are obtained. By taking the FFT of the two signals, the two profiles of amplitude (Fig. \ref{FT_AM_profile_PPT}) and phase (Fig. \ref{FT_PH_profile_PPT})
+as a function of frequency are obtained.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.35]{art/T_profile_PPT}
+	\caption{Temperature profiles of a reference zone (blue) and a defect zone (red)}
+	\label{T_profile_PPT}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.35]{art/FT_AM_T_profile_PPT}
+	\caption{Amplitude as a function of frequency: blue reference, red defect}
+	\label{FT_AM_profile_PPT}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.35]{art/FT_PH_T_profile_PPT}
+	\caption{Phase as a function of frequency: blue reference, red defect}
+	\label{FT_PH_profile_PPT}
+\end{figure}
+
+\subsection{Differential Absolute Contrast (DAC)}
+Traditionally, once the temperature of a sound area (reference zone)$T_s(t) $ and that of a defect zone $T_{def}(t) $ are known, contrast methods can be applied by simply:
+\begin{equation}
+C_{ac}(t) = T_{def}(t) - T_s(t)
+\label{AC_eq}
+\end{equation}
+which is known as the absolute contrast. However, this method becomes inconvenient when the sound area cannot be pratical defined. In addition, the common case of non-uniform heating has a strong effect on the results.
+
+To improve this, the Differential Absolute Contrast (DAC) has proven its amelioration for non-uniform heating situations\citep{Benitez2008, pilla2002new}.
+
+DAC method starts from Eq. \ref{PT_eq}, the surface temperature increase based on one-dimensional model of the Fourier equation after an instantaneous Dirac heating pulse is applied:
+\begin{equation}
+\Delta T = T(0,t) - T_0  = \frac{Q}{e\sqrt{\pi t}}
+\label{PT_eq_2}
+\end{equation}
+The temperature of the sound area at the surface ($z=0$) $T_s$ at time $t_1$ is given by:
+\begin{equation}
+\Delta T_s(t_1) = \frac{Q}{e\sqrt{\pi t_1}}
+\end{equation}
+Then at time $t$, the temperature can be written as:
+\begin{equation}
+\Delta T_s(t) = \frac{Q}{e\sqrt{\pi t_1}} = \sqrt{\frac{t_1}{t}}\cdot \Delta T(t_1)
+\end{equation}
+where $t_1$ is a time between the thermal pulse lasting and the time at which the first temperature spot of the subsurface defects appear.\\
+The absolute temperature contrast (Eq. \ref{AC_eq}) can be rewritten as:
+\begin{align}
+C_{ac}(t) = & [T_{def}(t) -T_0] - [T_s(t) - T_0] \\ 
+		  = & \Delta T_{def}(t) - \sqrt{\frac{t_1}{t}}\cdot \Delta T(t_1)
+\end{align}
+DAC Applications on different type of material samples can be found in \citep{pilla2002new}, which has proven this method has an effective improvement on the signal to noise ratio.
+
+\subsection{Temperature Signal Reconstruction (TSR)}
+The thermographic signal reconstruction (TSR) data processing technique is one of the most recent improvements which raise thermography to the level of the most established NDE techniques \citep{Balageas2015}.
+
+Same as DAC method, Eq. \ref{PT_eq_2} can be rewritten  in logarithmic way as:
+\begin{equation}
+\log (\Delta T) = \log (\frac{Q}{e}) - \frac{1}{2}\log (\pi t)
+\end{equation}
+In a general way, as: %with degree $n$:
+\begin{equation}
+\log (\Delta T) = a_0 + a_1\log (t) + a_2[\log (t)]^2 +...+ [a_n\log(t)]^n
+\end{equation}
+This technique usually consists in the fitting of the experimental log-log plot by a polynomial of degree $n$, and also the computation of the 1$^{st}$ and 2$^{nd}$ derivatives of the thermograms.
+
+
+
+\subsection{Principal Component Thermography (PCT)}
+
+\subsection{Receiver Operating 	Characteristic (ROC)}
+The Receiver operating characteristic (ROC) curve is a technique in statistics which helps visualize, organize and select classifiers based on their performance. The curve graph is created by plotting the the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings. More details about concepts and definitions can be found in \citep{Fawcett2006}. While being frequently chosen a standard method in several scientific fields, ROC are rarely applied in the thermographic field.\citep{Bison2014a} 
+
+In the ROC curves definitions, the \textit{sensitivity} is the True positive rate (\textit{tp rate}), and \textit{1-specificity} is the False positive rate (\textit{fp rate}).
+
+
+\section{Modeling and simulation}
+In this research, all modelling and simulation work are undertaken in the platform COMSOL Multiphysics$^{\textregistered}$, which might be helpful when comparing with the experimental results.
+%\section{Introduction to COMSOL Multiphysics}
+
+COMSOL Multiphysics is a general-purpose software platform, based on advanced numerical methods, for modeling and simulating physics-based problems. It is a finite element analysis, solver and Simulation software / FEA Software package for various physics and engineering applications, especially coupled phenomena, or multiphysics.
+
+The advantages of using COMSOL Multiphysics for modeling:
+\begin{itemize}
+	\item COMSOL Multiphysics has an integrated modeling environment.
+	\item COMSOL Multiphysics takes a semi-analytic approach: once questions specified, COMSOL symbolically assembles finite-element method matrices and organizes the bookkeeping.
+	\item COMSOL Multiphysics is fully compatible with MATLAB, so user could define programming for the modeling,organizing the computation, or the post-processing has full functionality. COMSOL Script is a MATLAB-like integrated programming environment that can also provide these facilities.
+	\item COMSOL Multiphysics provides pre-built templates as Application Modes and in the Model Library for common modeling applications.
+	\item COMSOL Multiphysics provides multiphysics modeling--linking well known ``application modes" transparently.
+	\item COMSOL Multiphysics innovated extended multiphysics--coupling between logically distinct domains and models that permits simultaneous solution.
+\end{itemize}
+
+All the simulation parameters and conditions can be found in corresponding chapters.
