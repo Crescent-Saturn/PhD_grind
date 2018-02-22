@@ -1,6 +1,11 @@
 \chapter{State of the art}     % numéroté
+\section*{Maintain the ``cold chain"}
+\phantomsection\addcontentsline{toc}{section}{Maintain the ``cold chain"}
+
 
 \section*{Infrared thermography for NDT \& E}
+\phantomsection\addcontentsline{toc}{section}{Infrared thermography for NDT \& E} % inclure dans TdM
+
 In the past few decades, a Nondestructive Testing \& Evaluation (NDT\&E) technique: Infrared Thermography (IT), also commonly referred as \textit{Thermal imaging}, or \textit{thermography}, has received growing attention and applications for diagnostics. This is due to its characteristics that ``it allows the mapping of thermal patterns, i.e. thermograms, on the surface of objects, bodies, or systems through the use of an infrared imaging instrument, such as an infrared camera" \citep{maldague3introduction}. Besides, its impressive quickness and convenience, the inspection attracted a wide variety of applications including biological, civil engineering, aerospace, cultural heritage, etc \citep{2007-Ibarra-Castanedo,2000-Li,cielo1987thermographie,shoja2011inspection,pradere2009microscale,avdelidis2004applications,maierhofer2005quantitative}. Other utilization such evaluation or measurements of heat transfer coefficients (or absorption) can be found in \citep{dragano2009experimental,grinzato2010r,grinzatoquality,grinzato1comparison,rossi2009k}.
 
 Infrared thermography is often divided into two approaches: passive thermography, in which materials and structures are naturally at different temperature than the environment; and active thermography, in which an external simulation is added to induce a thermal response \citep{Maldague2001theory}. The two approaches are described in next two sections.
@@ -54,6 +59,7 @@ where $Q$ is the energy absorbed, $T_0$  is the initial temperature, $k$ the con
 Thus, at the surface ($z=0$), one has:
 \begin{equation}
 T(0,t) = T_0 + \frac{Q}{\sqrt{k\rho C_p \pi t}}=T_0 + \frac{Q}{e\sqrt{\pi t}}
+\label{PT_eq}
 \end{equation}
 where $e=\sqrt{k\rho C_p}$ is defined as the thermal effusivity, which measures the material ability to exchange heat with its surroundings. Therefore, surface temperature will decay as a function of $t^{1/2}$.
 
@@ -155,5 +161,6 @@ In \citep{2012-LewisHom} a custom, microfluidic  heat  sink  with  an  IR-transp
 	\label{cooling_res}
 \end{figure}
 
-The experimental results (Fig \ref{cooling_res}) have shown that the technique has a potential to detect hidden flaws due to the influence of the physical differences between the defect and the non-defect area in the cooling parameters. But the results depended on the depth of defect: ``Greater depths require larger heating and greater ranges of precision in thermographic data acquisitions". Still, the limitation of that proposed method in this literature is only by natural convection. %Our work will apply the forced convection by spraying the nitrogen gas.
+The experimental results (Fig \ref{cooling_res}) have shown that the technique has a potential to detect hidden flaws due to the influence of the physical differences between the defect and the non-defect area in the cooling parameters. But the results depended on the depth of defect: ``Greater depths require larger heating and greater ranges of precision in thermographic data acquisitions". %Still, the limitation of that proposed method in this literature is only by natural convection. %Our work will apply the forced convection by spraying the nitrogen gas.
 
+\input{main/issue}
