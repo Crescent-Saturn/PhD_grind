@@ -135,13 +135,57 @@ Beyond reducing redundancy, PCT is also proposed as a contrast enhancement appro
 The entire results obtained in this thesis are mostly post-processed by PCT method.
 
 \subsection{Receiver Operating 	Characteristic (ROC)}
-The Receiver operating characteristic (ROC) curve is a technique in statistics which helps visualize, organize and select classifiers based on their performance. The curve graph is created by plotting the the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings. More details about concepts and definitions can be found in \citep{Fawcett2006}. While being frequently chosen a standard method in several scientific fields, ROC are rarely applied in the thermographic field.\citep{Bison2014a} 
+The Receiver operating characteristic (ROC) curve is a technique in statistics which helps visualize, organize and select classifiers based on their performance. ROC graphs have long been used in different fields as signal detection \citep{swets2000better}, diagnostic systems\citep{swets1988measuring}, medical decision\citep{zou2002receiver}, and the earliest one in machine learning\citep{spackman1989signal}. While being frequently chosen a standard method in several scientific fields, ROC are rarely applied in the thermographic field.\citep{Bison2014a}.
 
-In the ROC curves definitions, the \textit{sensitivity} is the True positive rate (\textit{tp rate}), and \textit{1-specificity} is the False positive rate (\textit{fp rate}).
+\subsubsection{ROC concept}
+Basically, a classification model (classifier or diagnosis) is a mapping of instances between certain classes/groups. For a two-class prediction problem (also known as binary classification), in which the results are marked either as positive ($p$) or negative ($n$). Then there are four results in a binary classification. Therefore, given an instance, it the instance is positive and it is classified as positive, it is called as a \textit{true positive}; if it is classified as negative, it is called as a \textit{false negative}. If the instance is negative and it is classified as negative, it is called as a \textit{true negative}; if it is classified as positive, it is called as a \textit{false positive}. When given a set of instances, a two-by-two confusion matrix (also called a contingency table) can be constructed representing the dispositions of the set of instances. 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=1.2]{art/ROCintro_1}
+	\caption{Confusion matrix}
+	\label{ROCintro_1}
+\end{figure}
 
+The parameters' rates in Fig. \ref{ROCintro_1} are calculated as following:\\
+The \textbf{true positive rate} (also called \textit{recall}):
+\begin{equation}
+tp\; rate = \frac{\Sigma \; \text{True positives}}{\Sigma \; \text{Total positives (or Condition positives)}}
+\end{equation}
+The \textbf{false positive rate} (also called \textit{false alarm rate}):
+\begin{equation}
+fp\; rate = \frac{\Sigma \; \text{False positives}}{\Sigma \; \text{Total negatives (or Condition negatives)}}
+\end{equation}
+
+Additional rates associated are defined as:\\
+The \textbf{true negative rate} (also called \textit{specificity}): 
+\begin{equation}
+tn\; rate = \frac{\Sigma \; \text{True negatives}}{\Sigma \; \text{Total negatives (or Condition negatives)}}
+\end{equation}
+The \textbf{false negative rate}:
+\begin{equation}
+fn\; rate = \frac{\Sigma \; \text{False negatives}}{\Sigma \; \text{Total positives (or Condition positives)}}
+\end{equation}
+And:
+\begin{equation*}
+\text{sensitivity} = \text{recall}
+\end{equation*}
+
+\subsubsection{ROC space}
+The corresponding ROC curve graph is created by plotting the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings \citep{Fawcett2006}.  Since TPR is equivalent to sensitivity and FPR is equal to 1 − specificity, the ROC graph is also called the sensitivity vs (1 − specificity) plot. In the ROC space, each prediction result or instance of a confusion matrix represents one point. Fig. \ref{ROC_space} shows one example of four prediction points.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.56]{art/ROC_space-2}
+	\caption{The ROC space}
+	\label{ROC_space}
+\end{figure}
+There are several points in ROC space which are important to note. The lower left point $ (0,0) $ represents the strategy of never issuing a positive classification; such a classifier commits no false positive errors but also gains no true positives. The opposite strategy, of unconditionally issuing positive classifications, is represented by the upper right point $ (1,1) $. The point $ (0,1) $ represents perfect classification.  Informally, one point in ROC space is better than another if it is to the northwest (tp rate is higher, fp rate is lower, or both) of the first. In the figure, $C'$ has the best performance as shown.
+
+The diagonal line (also called \textit{line of no-discrimination}) $y = x$ represents the strategy of randomly guessing a class. For example, if a classifier randomly guesses the positive class half the time, it can be expected to get half the positives and half the negatives correct; this yields the point $ (0.5, 0.5) $ in ROC space. The diagonal divides the ROC space. Points above the diagonal represent good classification results (better than random), points below the line represent poor results (worse than random). Note that the output of a consistently poor predictor could simply be inverted to obtain a good predictor. As $C$ and $C'$ shown in the figure.
+
+In conclusion,  any classifier that produces a point in the lower right triangle can be negated to produce a point in the upper left triangle. Any classifier on the diagonal may be said to have no information about the class.
 
 \section{Modeling and simulation}
-In this research, all modelling and simulation work are undertaken in the platform COMSOL Multiphysics$^{\textregistered}$, which might be helpful when comparing with the experimental results.
+In this thesis, all modeling and simulation work are undertaken in the platform COMSOL Multiphysics$^{\textregistered}$, which might be helpful when comparing with the experimental results.
 %\section{Introduction to COMSOL Multiphysics}
 
 COMSOL Multiphysics is a general-purpose software platform, based on advanced numerical methods, for modeling and simulating physics-based problems. It is a finite element analysis, solver and Simulation software / FEA Software package for various physics and engineering applications, especially coupled phenomena, or multiphysics.
