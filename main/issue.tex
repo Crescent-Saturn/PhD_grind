@@ -1,12 +1,35 @@
-\section{Issue, hypothesis and objectives}
+\section*{Issue, hypothesis and objectives}
+\phantomsection\addcontentsline{toc}{section}{Issue, hypothesis and objectives}
 \subsection{Issue}
 
+Following recent decades, the public is becoming increasingly aware of the need to apply rigorous standards throughout the food chain.
+
+In this project, we want to improve these tests by developing quantitative methods for identifying thermal insulation anomalies in refrigerated vehicles for the transport of food. We also want to develop an aging model of the panels constituting the refrigerated "box" of the vehicle to predict its remaining useful life. The implementation of improved tests will ensure food safety during the transportation of refrigerated food.
+Indeed, the coefficient k of a vehicle with a tendency in time to decrease because of the aging of the insulating panels (migration of the insulating gases out of the foam panels, detachments of the walls following the mechanical stresses undergone by the vehicle, etc.) . Currently the standards only require testing at commissioning and afterwards at six years. This duration is probably too long and a quantitative model allowing a prediction of the evolution of the coefficient $K$ would add rigor to the current process. In addition, the imposed measurement tests of $K$ are essentially done on each of the faces, without taking into account the corner zones which are especially at risk. Infrared thermography would identify and quantify local thermal anomalies so as to establish an overall measure of $K$ more accurate while "sounding the alarm" in case of serious failure.
+
+On the other hand, tradition active infrared thermography with heating stimulation device can be impossible to detect thermal insulation anomalies directly in refrigerated vehicle, since it would be too difficult to heat the entire vehicle ``box". Therefore, the idea of cold approach (compressed air, liquid nitrogen, etc.) comes up having its own advantages under this circumstance: it will be more economical than the heating approach, and more beneficial since there is less thermal noises.
+
 \subsection{Hypothesis}
+For the part of the application of infrared thermography in ``cold food chain", the heat exchange coefficients inside and outside of the insulated ``box" will be constant when the ATP standard test arrives at a stable condition. Moreover, the heat diffusion will be mainly one dimension.
 
+For the part of the exploration of cold approaches in infrared thermography, heat propagation will have the same performance, since the material conductivity will not change whether in hot approach or the cold one.
 \subsection{Objectives}
+In this project, we are particularly interested in the ``cold chain" and more particularly the transport of food in refrigerated vehicles (ie trucks, trailers, containers). The transportation of dairy products, meat and frozen foods are especially at risk. In addition, the ever-increasing cost of energy makes it possible to limit refrigeration to a minimum. It is therefore essential to ensure an irreproachable thermal insulation during the inspection of refrigerated vehicles. There are thermal insulation compliance tests to ensure satisfactory food transportability \citep{Geneva1970}. During these tests, measurements of heat transfer coefficients are measured (coefficient $ K $). Nonetheless, if there are some local flaws or thermal bridges inside the panels, which could not be measured by ATP tests, then the insulation can no longer be guaranteed. Infrared thermography can be particularly helpful regarding these issues. %On the other hand this measure proves rather rough. In this project, we want to improve these tests.
 
+To this end, three objectives will be pursued in this thesis:
+\begin{itemize}
+	\item \textbf{Objective 1$ ^\circ $ } - Development of quantitative methods for identifying thermal insulation anomalies in refrigerated vehicles for the transport of food.
+	\item \textbf{Objective 2$ ^\circ $ } - Development of an aging model of panels constituting the refrigerated ``box" of the vehicle in order to predict its objective remaining useful lives. 
+	\item \textbf{Objective 3$ ^\circ $ } - Development of a model using a cold stimulation device to identify thermal insulation anomalies in insulated materials.
+\end{itemize}
 
+The achievement of these three objectives of this thesis requires the following specific tasks (which can be carried out in parallel):
 
+\S 1.1 Establishment of a thermal image database on a maximum of refrigerated vehicles. §1.2 In parallel, laboratory tests on a refrigerated "box" of reduced size placed in a climatic chamber will allow the elaboration of a first model of thermal behavior. §1.3 First approaches to the treatment of infrared images (identification of anomalies - at the junctions of the panels).
+
+\S 2.1 Stripping of images from the bank will be done and image processing approaches will be developed to identify areas of anomalies. The images will be segmented and the thermal parameters will be calculated since the images will have been acquired under specified conditions \citep{Ibarra-Castanedo2013}. §2.2 The refrigerated "box" will be subjected to mechanical and thermal stresses in order to accelerate its aging which will allow a validation of the model of thermal behavior. Realistic artificial defects (based on the knowledge acquired in §1.1 will also be realized in the ``box"). §2.3 A test campaign for final validation (it should be possible to validate a certain aging by comparing the current results with previous measurements by re-testing some vehicles measured in advance. § 1.1). §2.4 Latest improvements to the thermal prediction model.
+
+\S 3.1 Attempt of identifying defects in insulated material with infrared thermography by a cold stimulation (compressed air, liquid nitrogen, etc.) \S 3.2 Comparison with traditional heating approaches in infrared thermography for Non-Destructive Testing. \S 3.3 Comparison in modeling and simulation tests.
 
 \section{Methodology}
 Thought infrared thermography has the advantages such as fast inspection, ease of deployment, contactless, security and easy access to results with the imaging capabilities, raw infrared thermography results is difficult to handle and analyze in case of reflections and non-uniform external stimulation. To improve the inspection results, there are various post-processing techniques which have been developed. The recently popular data analyzing and processing methods are presented in detail in the following subsections.
@@ -64,7 +87,7 @@ Traditionally, once the temperature of a sound area (reference zone)$T_s(t) $ an
 C_{ac}(t) = T_{def}(t) - T_s(t)
 \label{AC_eq}
 \end{equation}
-which is known as the absolute contrast. However, this method becomes inconvenient when the sound area cannot be pratical defined. In addition, the common case of non-uniform heating has a strong effect on the results.
+which is known as the absolute contrast. However, this method becomes inconvenient when the sound area cannot be practical defined. In addition, the common case of non-uniform heating has a strong effect on the results.
 
 To improve this, the Differential Absolute Contrast (DAC) has proven its amelioration for non-uniform heating situations\citep{Benitez2008, pilla2002new}.
 
