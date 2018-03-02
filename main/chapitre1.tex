@@ -2,6 +2,7 @@
 \section*{Maintain the ``cold chain"}
 \phantomsection\addcontentsline{toc}{section}{Maintain the ``cold chain"}
 
+\section{ATP background}
 As one major procedure of the cold chain concept, the correct transport of perishable foodstuffs in refrigerated vehicles is a critical link in the food chain not only in terms of maintaining the temperature integrity of the transported products but also its impact on energy consumption and CO$^2$ emissions. Referring this, the  commercial food sector, including agriculture, food manufacture transport and retail are responsible for the total greenhouse gas emissions in whole world.
 
 According to a report \citep{watkiss2005validity}, food manufacture distribution estimated to be responsible for 1.8\% of the total emission. Due to a variety of operating conditions and constraints, transport refrigeration equipment operation needs more rigorous environment, such as suitable temperature controlled handling and storage facilities that can maintain food at appropriate temperatures and enable these temperatures to be monitored controlled and recorded. There are also specific temperature requirements for certain categories of food, one example is given in Fig. \ref{tem_reqs} \citep{tem_reqs}.
@@ -32,14 +33,33 @@ S = \sqrt{S_i \cdot S_e}
 
 After each ATP standard test, a valid ATP capacity report is delivered to the refrigeration equipment, and according to the agreements, a refrigerated vehicle installing that equipment must possess the report during the transportation. Usually, the ATP certificate ensures that the insulated body and the refrigeration unit have been tested by a third party and that the two have been appropriately matched.
 
+\section{Application of infrared thermography in ATP}
+Until now, the ATP prescribes a procedure to measure the insulating status of equipments with a global approach. This approach is robust and furnishes an average behavior of the insulated box. On the other hand, this procedure is not able to locate departures from the average conditions that may be localized somewhere in the structure, like thermal bridges due to structural elements, lack of insulation due to a bad foam distribution inside the panel, zones of anomalous aging due to a localized degradation of the polyurethane, air leakage around the opening gaskets. 
 
-Till now, the ATP prescribes a procedure to measure the insulating status of equipments with a global approach. This approach is robust and furnishes an average behavior of the insulated box. On the other hand, this procedure is not able to locate departures from the average conditions that may be localized somewhere in the structure, like thermal bridges due to structural elements, lack of insulation due to a bad foam distribution inside the panel, zones of anomalous aging due to a localized degradation of the polyurethane, air leakage around the opening gaskets. 
+A technique like infrared thermography could be particularly useful in giving a local approach to the identification of these anomalies. One example is found in \citep{Estrada-Flores1996use}, where a thermographic survey was performed on two types of insulated bodies: (a) truck bodies with a difference of 64 °C between internal and ambient temperature; and (b) insulated panel vans with a difference of 28 °C between internal and ambient temperature. The thermographic images can be found in \ref{Estrada-Flores1996use}. Heat leakage, thermal expansion and thermal bridges have been well observed and discussed in relevant results. 
 
-A technique like infrared thermography could be particularly useful in giving a local approach to the identification of these anomalies. One example is found in \citep{Estrada-Flores1996use}, where A thermographic survey was performed on two types of insulated bodies: (a) truck bodies with a difference of 64 °C between internal and ambient temperature; and (b) insulated panel vans with a difference of 28 °C between internal and ambient temperature. Heat leakage, thermal expansion and thermal bridges have been well observed and discussed in relevant results.
+\begin{figure}[htbp]
+	\centering
+	\subfloat[Side view of an insulated van]
+	{
+		\includegraphics[scale=0.9]{art/Estrada-Flores1996use_1}
+	}
+	\\
+	\subfloat[Rear doors of an insulated van]
+	{
+		\includegraphics[scale=0.9]{art/Estrada-Flores1996use_2}
+	}
+	\caption{The thermographic images show 12 sections of each visible light image \citep{Estrada-Flores1996use}.}
+	\label{Estrada-Flores1996use}
+\end{figure}
 
 Indeed, all the localized lack of insulation described above lead to a variation of the heat flux and therefore to a variation of the temperature on the surface of the insulated equipments that in general may be detected by thermography. Some papers on this subject have been published \citep{grinzatoquality,grinzato1comparison}. There, the expertise was used to weight the local thermal anomalies in order to rank the final effect on the K-value. %Here, a more straightforward and quantitative approach is used to evaluate the local K-value, mainly by infrared thermography.
 
 Recently, \citep{rossi2009k} has applied infrared thermography to a simplified thermal model for evaluating thermal performance of insulated vehicles. ATP standard tests have been performed in parallel for comparison. In their results, defective zones are identified and the local heat flux mapped basing on a heat flux meter measurement in a reference point and on the thermographic temperature maps.
+
+Moreover, infrared thermography can also help to evaluate the thermal coefficients of the refrigerated vehicle panels. One example is found in \citep{dragano2009experimental}, where the absorption coefficient of an sandwich panel of the standard insulated vehicle, which is used in refrigerated transport, has been evaluated in transient conditions by a thermographic camera.
+
+
 
 
 \section*{Infrared thermography for NDT \& E}
@@ -62,7 +82,7 @@ Contrary to ``\textit{Passive}", the word ``\textit{Active}" seems more progress
 	\caption{Experimental setup for the active thermography}
 	\label{exp_active}
 \end{figure}
-where \textcircled{1} are two different stimulation sources. They can be located in the same side of the camera, which is known as \textit{reflection} mode; or in the opposite side of the camera, which is known as \textit{transmission} mode.  \textcircled{2} is the specimen under test, \textcircled{3} is the IR camera for recording, and \textcircled{4} is the PC for processing. The whole system is connected by a synchronization control.
+where \textcircled{\small 1} are two different stimulation sources. They can be located in the same side of the camera, which is known as \textit{reflection} mode; or in the opposite side of the camera, which is known as \textit{transmission} mode.  \textcircled{\small 2} is the specimen under test, \textcircled{\small 3} is the IR camera for recording, and \textcircled{\small 4} is the PC for processing. The whole system is connected by a synchronization control.
 
 Practically, \textit{any} form of energy can be used to produce a measurable thermal contrast. In addition, since the external stimulation can be accurately controlled, quantitative procedure is possible. 
 
@@ -200,6 +220,6 @@ In \citep{2012-LewisHom} a custom, microfluidic  heat  sink  with  an  IR-transp
 	\label{cooling_res}
 \end{figure}
 
-The experimental results (Fig \ref{cooling_res}) have shown that the technique has a potential to detect hidden flaws due to the influence of the physical differences between the defect and the non-defect area in the cooling parameters. But the results depended on the depth of defect: ``Greater depths require larger heating and greater ranges of precision in thermographic data acquisitions". %Still, the limitation of that proposed method in this literature is only by natural convection. %Our work will apply the forced convection by spraying the nitrogen gas.
-
+The experimental results (Fig \ref{cooling_res}) have shown that the technique has a potential to detect hidden flaws due to the influence of the physical differences between the defect and the non-defect area in the cooling parameters. But the results depended on the depth of defect: ``Greater depths require larger heating and greater ranges of precision in thermographic data acquisitions". 
+%Still, the limitation of that proposed method in this literature is only by natural convection. %Our work will apply the forced convection by spraying the nitrogen gas.
 \input{main/issue}
