@@ -176,7 +176,7 @@ One other similar is found in \citep{Maldague1994bInfra}, where the thermographi
 	\caption{Thermographic inspection by propagation of a cold front for the inspection of bonded Al structures.}
 	\label{Al_stru_cold}
 \end{figure}
-In the latter's thermal image, the structure was initially at a temperature of some 10°C above room temperature and a line of air jets was used to quickly cool the inspected area. The image shows the hotter central area which corresponds to the bonded area (oriented vertically on the thermogram). The cooler region at the center of the bonding line reveals a bonding defect (lack of adhesive).
+In the study, the structure was initially at a temperature of some 10$°C$ above room temperature and a line of air jets was used to quickly cool the inspected area. The thermal image shows the hotter central area which corresponds to the bonded area. And a bonding defect, which is lack of adhesive, is then revealed by the cooler region at the center of thermogram.
 
 Another example of stimulation by propagation of a cool front in the same mode on an Al-foam panel was presented in \citep{Maldague1993Nondestructive}(Fig \ref{Al_foam_hc}).
 \begin{figure}[!htbp]
@@ -185,11 +185,14 @@ Another example of stimulation by propagation of a cool front in the same mode o
 	\caption{Thermographic inspection using a line of air jets with pre-heating then cooling.}
 	\label{Al_foam_hc}
 \end{figure}
-In this case, it is necessary to detect an non-bonded area in a Al-foam laminate. The panel was first uniformly heated at a temperature of about 10$°C$ above room temperature. The surface was then cooled by a line of cool air jets during the lateral moving of the panel (at a constant speed of 2.4 $cm/s$). In the figure of two shown thermograms, one is for a sound area and the other is for an area where a circular-shaped disbonding (4 cm diameter) is present. The defect is clearly visible at the image center. 
+In this study, an non-bonded area in a Al-foam laminate was to be detected. The panel was first uniformly heated at a temperature of about 10$°C$ above room temperature (same to the previous study). The surface was then cooled by a line of cool air jets during the lateral moving of the panel, and it was at a constant speed of 2.4 $cm/s$. In the figure of two shown thermograms, one is without defect and the other is for an area where a circular-shaped disbonding (4 cm diameter) is present. The defect is clearly visible at the image center. 
 
-In addition, after comparing  the radiative-heat injection and convection-heat removal approach in \citep{Maldague1993Nondestructive}. They found that, a reduced thermal contrast is obtained with the cool air stimulation due to both the reduced heat capacity of air and the smaller temperature differential between the thermal perturbing source and the inspected surface (case of air versus high temperature radiative source). 
+In addition, after comparing  the radiative-heat injection and convection-heat removal approach in \citep{Maldague1993Nondestructive}. They found that, a reduced thermal contrast is obtained with the cool air stimulation due to both the reduced heat capacity of air and the smaller temperature differential between the thermal perturbing source and the inspected surface (case of air versus high temperature radiative source).  Moreover, both two studies have firstly heated the specimen and then cooled it by air jets. This indicates that a higher initial temperature difference is essential for a better result in thermograms, especially when applying the cold approach by air jets. Unlike traditional heating method, which can heat the specimen to a suitable high temperature, cooling method by air jets cannot cool the specimen to an adequate low temperature. 
 
-Other applications have then been made during the past decades in several domains. \citep{endohdynamical2012} proposed constructing an active thermographic imaging system, in which a cooling material contacts the surface and scans over a welded zone of two stainless plates (Fig \ref{endoh_fig}).
+
+Other applications have then been made during the past decades in several domains. \citep{Swiatczak2008Evaluation} evaluates convection cooling conditions of electronic devices by thermal wave method using Fourier and wavelet analysis in lock-in thermography. One study of applying cold excitation in thermal tomography can be found in \citep{Bajorek2010Analysis}, where a stream of carbon dioxide of different duration as the cooling excitation was applied by a cryogenic instrument. possibilities of reconstruction object parameters were analyzed in their results. The quality of the results (not only the defects locations, but also their depth) would be improved with increasing cold excitation duration.
+
+\citep{endohdynamical2012} proposed constructing an active thermographic imaging system, in which a cooling material contacts the surface and scans over a welded zone of two stainless plates (Fig \ref{endoh_fig}).
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[scale=1]{art/endoh_axe}\\
@@ -213,7 +216,19 @@ They recorded both a time-varying thermographic image and a real-time response o
 
 In both two cases of scanning (v= 10 and v=50 $mm/s$), it is observed that the locally high-temperature appears in low-temperature region of the simulated welding region. For axial movement of coolant material, the heat inside and the surface of the specimen transfers toward the interface surface of the specimen to the coolant, due to conservation of the axial symmetry of heat transfer. However, for lateral movement of coolant, it was squeezed for the spatial distribution of the temperature along the direction of coolant movement. Therefore, an elliptical shape of temperature distribution was obtained.
 
-In \citep{2012-LewisHom} a custom, microfluidic  heat  sink  with  an  IR-transparent working  fluid  (0.75  LPM)  was  manufactured  to  cool  an instrumented test chip while permitting optical access for IR thermal imaging.  Then a detailed system calibration was conducted to account for the temperature-dependent optical properties of the chip and heat sink. Their experiments  confirm  that  the  dynamic  range  of  the infrared  microscope  can  be  greatly  enhanced  by decreasing the  thickness  of  the  liquid  layer. \citep{rodriguez2014cooling} deployed an thermographic test to the detection of subsurface cracks in welding. The procedure started with the thermal excitation of the material, following with the monitoring of the cooling process with infraRed thermography. They used the natural convection between the material and the environment, but two method of heating were deployed in to same specimen. One is heating from the front surface (Method 1), the other is heating from back surface (Method 2). 
+In \citep{Gradeck2012Solution},  a jet cooling experiment is used to study a two-dimensional inverse heat conduction problem. To estimate a transient cooling flux, a nickel disk is heated up to 600 °C then cooled by a water jet squirting on its front side and a infrared camera captures its rear side temperature. Thermograms of cooling procedure can be found in Fig \ref{Gradeck2012Solution_1}.
+\begin{figure}
+	%\hspace{-45pt}
+	\centering
+	\includegraphics[scale=1.0]{art/Gradeck2012Solution_1}
+	\caption{Raw thermographic frames during cooling of the disk by a 1.74 $ m/s $ water jet.}
+	\label{Gradeck2012Solution_1}
+\end{figure}
+The disk temperature stays almost homogeneous at the beginning (Fig \ref{Gradeck2012Solution_1}a). Circular isotherms then are observed in the central region of the disk after jet impingement (Fig \ref{Gradeck2012Solution_1}b). Due to the forced convection, the cold zone propagates to the external regions rapidly (Fig \ref{Gradeck2012Solution_1}c-f), with a boiling zone where heat flux is important emerges (Fig \ref{Gradeck2012Solution_1}c), becomes film (Fig \ref{Gradeck2012Solution_1}e) and finally vanishes (Fig \ref{Gradeck2012Solution_1}f).
+
+In \citep{2012-LewisHom} a custom, microfluidic  heat  sink  with  an  IR-transparent working  fluid  (0.75  LPM)  was  manufactured  to  cool  an instrumented test chip while permitting optical access for IR thermal imaging.  Then a detailed system calibration was conducted to account for the temperature-dependent optical properties of the chip and heat sink. Their experiments  confirm  that  the  dynamic  range  of  the infrared  microscope  can  be  greatly  enhanced  by decreasing the  thickness  of  the  liquid  layer. 
+
+\citep{rodriguez2014cooling} deployed an thermographic test to the detection of subsurface cracks in welding. The procedure started with the thermal excitation of the material, following with the monitoring of the cooling process with infrared thermography. They used the natural convection between the material and the environment, but two method of heating were deployed in to same specimen. One is heating from the front surface (Method 1), the other is heating from back surface (Method 2). 
 
 \begin{figure}
 	\hspace{-45pt}
@@ -222,7 +237,9 @@ In \citep{2012-LewisHom} a custom, microfluidic  heat  sink  with  an  IR-transp
 	\caption{Thermal images of each defect for two methods Natural convection cooling}
 	\label{cooling_res}
 \end{figure}
+The experimental results (Fig \ref{cooling_res}) have shown that the technique has a potential to detect hidden flaws due to the influence of the physical differences between the defect and the non-defect area in the cooling parameters. But the results depended on the depth of defect: ``Greater depths require larger heating and greater ranges of precision in thermographic data acquisitions".
 
-The experimental results (Fig \ref{cooling_res}) have shown that the technique has a potential to detect hidden flaws due to the influence of the physical differences between the defect and the non-defect area in the cooling parameters. But the results depended on the depth of defect: ``Greater depths require larger heating and greater ranges of precision in thermographic data acquisitions". 
+ 
 %Still, the limitation of that proposed method in this literature is only by natural convection. %Our work will apply the forced convection by spraying the nitrogen gas.
+\newpage
 \input{main/issue}
