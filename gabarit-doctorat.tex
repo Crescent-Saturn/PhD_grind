@@ -22,6 +22,10 @@
   \usepackage{ncccomma}      % gestion de la virgule dans les nombres
   \usepackage{pdfpages}
   \usepackage[caption=false]{subfig}
+  \usepackage{nomencl}
+  \makenomenclature
+  
+  \renewcommand{\nomname}{List of Acronyms}
 %  \usepackage{paralist}  % Paralist items
   %% Utilisation d'une autre police de caractères pour le document.
   %% - Sous LaTeX
@@ -92,6 +96,11 @@
 \listoffigures                  % production de la liste des figures
 \cleardoublepage
 
+\input{main/nomenclature}
+\printnomenclature
+\phantomsection\addcontentsline{toc}{chapter}{List of Acronyms} 
+\cleardoublepage
+
 \dedicace{For Steven \& Alice}
 \cleardoublepage
 
@@ -118,9 +127,9 @@
 \include{main/conclusion}            % conclusion
 
 
-\appendix                       % annexes le cas échéant
+%\appendix                       % annexes le cas échéant
 
-\include{main/annexe}                % annexe A
+%\include{main/annexe}                % annexe A
 
 \bibliography{//gel.ulaval.ca/Vision/Usagers/lelei/Desktop/Bibliography/Biblio_th}                 % production de la bibliographie
 
