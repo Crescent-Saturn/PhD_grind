@@ -129,7 +129,7 @@ In practice, logarithmic data may vary from ideal one-dimensional behavior for a
 
 
 \subsection{Principal Component Thermography (PCT)}
-Principal Component Analysis (PCA) is a statistical analysis tool used for identifying patterns in data and expressing the data in a way to highlight the similarities and differences in patterns. When data dimension is very high, the pattern matching of the data then becomes very difficult. Thus, PCA comes to extract features and reduce redundancy by projecting the data onto a system of orthogonal components, which is known as PCT \cite{Rajic2002,Rajic2002a}. 
+Principal Component Analysis (PCA) is a statistical analysis tool used for identifying patterns in data and expressing the data in a way to highlight the similarities and differences in patterns. When data dimension is very high, the pattern matching of the data then becomes very difficult. Thus, PCA comes to extract features and reduce redundancy by projecting the data onto a system of orthogonal components, which is known as PCT \citep{Rajic2002,Rajic2002a}. 
 
 Singular Value Decomposition (SVD) is often used in PCA. Generally, a matrix $M$ of $m\times n$ can be decomposed in the form of:
 \begin{equation}
@@ -137,8 +137,7 @@ A = U R V^T
 \end{equation}
 where $U$ is an $M\times N$ unitary matrix, $R$ is a diagonal $N \times N$ matrix with non-negative real numbers on the diagonal, $V$ is an $N\times N$ unitary matrix, and $V^T$ is the conjugate transpose of $V$.
 
-The 3D thermogram matrix needs to be reorganized as a 2D $M\times N$ matrix $A$ with the dimension of time along the columns and space. The columns of $U$ represent a set of orthogonal statistical modes known as Empirical
-Orthogonal Functions (EOFs) which describe the data spatial variations, while the time variations are represented by the Principal Components (PCs) which are arranged row-wise in matrix $V_T$. Then applying the SVD to the 2D matrix, the resulting U matrix, providing the spatial information, can be rearranged as a 3D sequence \citep{Ibarra-Castanedo2006}. Whole procedure is illustrated in Fig. \ref{PCT_SVD}.
+The 3D thermogram matrix needs to be reorganized as a 2D $M\times N$ matrix $A$ with the dimension of time along the columns and space. The columns of $U$ represent a set of orthogonal statistical modes known as Empirical Orthogonal Functions (EOFs) which describe the data spatial variations, while the time variations are represented by the Principal Components (PCs) which are arranged row-wise in matrix $V_T$. Then applying the SVD to the 2D matrix, the resulting U matrix, providing the spatial information, can be rearranged as a 3D sequence \citep{Ibarra-Castanedo2006}. Whole procedure is illustrated in Fig. \ref{PCT_SVD}.
 \begin{figure}[htbp]
 	\centering
 	\subfloat[Thermographic data rearrangement from a 3D sequence to a 2D matrix]
@@ -211,7 +210,7 @@ In conclusion,  any classifier that produces a point in the lower right triangle
 In this thesis, all modeling and simulation work are undertaken in the platform COMSOL Multiphysics{\textregistered}, which might be helpful when comparing with the experimental results.
 %\section{Introduction to COMSOL Multiphysics}
 
-COMSOL Multiphysics is a general-purpose software platform, based on advanced numerical methods, for modeling and simulating physics-based problems. It is a finite element analysis, solver and Simulation software / FEA Software package for various physics and engineering applications, especially coupled phenomena, or multiphysics.
+COMSOL Multiphysics is a general-purpose software platform, based on advanced numerical methods, for modeling and simulating physics-based problems. It is a finite element analysis, solver and Simulation software / Finite Element Analysis (FEA) Software package for various physics and engineering applications, especially coupled phenomena, or multiphysics.
 
 The advantages of using COMSOL Multiphysics for modeling:
 \begin{itemize}
