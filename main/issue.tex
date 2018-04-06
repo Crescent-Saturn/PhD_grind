@@ -206,6 +206,11 @@ The diagonal line (also called \textit{line of no-discrimination}) $y = x$ repre
 
 In conclusion,  any classifier that produces a point in the lower right triangle can be negated to produce a point in the upper left triangle. Any classifier on the diagonal may be said to have no information about the class.
 
+\subsubsection{Area under curve analysis}
+In ROC analysis, a common method to compare different classifiers is to calculate the area under the ROC curve, known as AUC\citep{Fawcett2006}. In this way, a single scalar value will represent the expected performance of the classifiers. As in the ROC curve profile, the AUC is a part of the unit square are, therefore, its value will be between 0 and 1. Thus, random guessing classifier produces a diagonal line between (0,0) and (1,1), which has an area of 0.5. It can be then indicated that a classifier AUC value less than 0.5 is even worse than a random guessing. 
+
+An important statistical property of the AUC is that a classifier's AUC value is equivalent to the probability that the classifier will rank a randomly chosen positive instance higher than a randomly chosen negative instance. 
+
 \section{Modeling and simulation}
 In this thesis, all modeling and simulation work are undertaken in the platform COMSOL Multiphysics{\textregistered}, which might be helpful when comparing with the experimental results.
 %\section{Introduction to COMSOL Multiphysics}
