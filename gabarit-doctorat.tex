@@ -10,7 +10,7 @@
 %%   [l'un de LLD, DMus, DPsy, DThP, PhD]
 %% et les langues les plus courantes. Le français sera la langue par
 %% défaut du document.
-\documentclass[PhD,french,english, 12pt]{ulthese}
+\documentclass[PhD, nonatbib, french,english, 12pt]{ulthese}
   %% Encodage utilisé pour les caractères accentués dans les fichiers
   %% source du document. Les gabarits sont encodés en UTF-8. Inutile
   %% avec XeLaTeX, qui gère Unicode nativement.
@@ -25,6 +25,11 @@
   \usepackage{nomencl}
   \makenomenclature
   
+  \usepackage{chapterbib}
+  \usepackage[sectionbib, authoryear,square]{natbib}
+  
+  \renewcommand{\refname}{Reference}  
+  \renewcommand{\bibname}{Reference}  
   \renewcommand{\nomname}{List of Acronyms}
 %  \usepackage{paralist}  % Paralist items
   %% Utilisation d'une autre police de caractères pour le document.
@@ -55,15 +60,22 @@
     og=«, fg=»                     % caractères « et » sont les guillemets
   }
 
+%% Suppression du numéro de section de la bibliographie. Utilisation
+%% de \extrasfrench parce que c'est la dernière langue déclarée dans
+%% \documentclass, ci-dessus.
+\addto\extrasenglish{%
+ \renewcommand{\bibsection}{\section*{\bibname}\prebibhook}}
+
   %% Style de la bibliographie.
-  \setcitestyle{authoryear, square}
-  \bibliographystyle{plainnat}
+%  \setcitestyle{numbers, square}
+
+%  \bibliographystyle{plainnat}
 
   %% Déclarations des pages de titre. Remplacer les éléments entre < >.
   %% Supprimer les caractères < >. Couper un long titre ou un long
   %% sous-titre manuellement avec \\.
 %  \titre{Application of infrared thermography in maintaining the ``cold chain" \&\& Exploration of cold approach in infrared thermography for Non-Destructive Testing}
-  \titre{Cold food chain: Infrared thermography applied to the evaluation of insulation anomalies in refrigerated vehicles for the transport of food \&\& Exploration of cold approach in infrared thermography for Non-Destructive Testing}
+  \titre{Cold food chain: Infrared thermography applied to the evaluation of insulation anomalies in refrigerated vehicles for the transport of food \& Exploration of cold approach in infrared thermography for Non-Destructive Testing}
   % \titre{Ceci est un exemple de long titre \\
   %   avec saut de ligne manuel}
   % \soustitre{Sous-titre le cas échéant}
@@ -114,12 +126,14 @@
 
 \include{main/introduction}          % introduction
 \include{main/chapitre1}             % chapitre 1
+
 \include{main/chapitre2}             % chapitre 2, etc.
 
 %\includepdf[pages=-]{Prop_these_lei}
 
 \include{main/chapitre3}
 \include{main/chapitre4}
+
 %\includepdf[pages=-]{Revised_Version_2}
 %\includepdf[pages={2-11}]{Lei2017Detection}
 %\includepdf[pages=-]{Thermosense2017_Lei}
@@ -131,6 +145,6 @@
 
 %\include{main/annexe}                % annexe A
 
-\bibliography{//gel.ulaval.ca/Vision/Usagers/lelei/Desktop/Bibliography/Biblio_th}                 % production de la bibliographie
+%\bibliography{U:/Desktop/Bibliography/Biblio_th}                 % production de la bibliographie
 
 \end{document}
