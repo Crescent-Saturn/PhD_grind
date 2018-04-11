@@ -34,9 +34,9 @@ The achievement of these three objectives of this thesis requires the following 
 \section{Methodology}
 Thought infrared thermography has the advantages such as fast inspection, ease of deployment, contactless, security and easy access to results with the imaging capabilities, raw infrared thermography results is difficult to handle and analyze in case of reflections and non-uniform external stimulation. To improve the inspection results, there are various post-processing techniques which have been developed. The recently popular data analyzing and processing methods are presented in detail in the following subsections.
 \subsection{Fourier Transform (FT)}
-Among all data processing methods, Fourier Transform (FT) is especial because it helps retrieve phase and amplitude data from raw results, since our principal results are images, which can be seen as signals with two dimensions.
+Among all data processing methods, Fourier Transform (FT) is particularly interesting because it helps retrieve phase and amplitude data from raw results, since our principal results are images, which can be seen as signals with two dimensions.
 
-It is well-known that any wave form, periodic or not, can be approximated by the sum of purely harmonic waves oscillating at different frequencies. The Continuous Fourier Transform (CFT) is then given by:
+It is well-known that any wave-form, periodic or not, can be approximated by the sum of purely harmonic waves oscillating at different frequencies. The Continuous Fourier Transform (CFT) is then given by:
 \begin{equation}
 F(\omega) = \int_{-\infty}^{\infty}f(t)e^{-j\omega t}dt = A(\omega)e^{i\phi(\omega)}
 \end{equation}
@@ -113,7 +113,7 @@ C_{ac}(t) = & [T_{def}(t) -T_0] - [T_s(t) - T_0] \\
 DAC Applications on different type of material samples can be found in \citep{pilla2002new}, which has proven this method has an effective improvement on the signal to noise ratio.
 
 \subsection{Temperature Signal Reconstruction (TSR)}
-The thermographic signal reconstruction (TSR) data processing technique is one of the most recent improvements which raise thermography to the level of the most established NDE techniques \citep{Balageas2015}.
+The thermographic signal reconstruction (TSR) data processing technique is one of the most recent improvements which raise thermography to the level of the most established NDE techniques \citep{shepard2003reconstruction, Balageas2015}.
 
 Same as DAC method, Eq. \ref{PT_eq_2} can be rewritten  in logarithmic way as:
 \begin{equation}
@@ -137,7 +137,7 @@ A = U R V^T
 \end{equation}
 where $U$ is an $M\times N$ unitary matrix, $R$ is a diagonal $N \times N$ matrix with non-negative real numbers on the diagonal, $V$ is an $N\times N$ unitary matrix, and $V^T$ is the conjugate transpose of $V$.
 
-The 3D thermogram matrix needs to be reorganized as a 2D $M\times N$ matrix $A$ with the dimension of time along the columns and space. The columns of $U$ represent a set of orthogonal statistical modes known as Empirical Orthogonal Functions (EOFs) which describe the data spatial variations, while the time variations are represented by the Principal Components (PCs) which are arranged row-wise in matrix $V_T$. Then applying the SVD to the 2D matrix, the resulting U matrix, providing the spatial information, can be rearranged as a 3D sequence \citep{Ibarra-Castanedo2006}. Whole procedure is illustrated in Fig. \ref{PCT_SVD}.
+The 3D thermogram matrix needs to be reorganized as a 2D $M\times N$ matrix $A$ with the dimension of time along the columns and space. The columns of $U$ represent a set of orthogonal statistical modes known as Empirical Orthogonal Functions (EOFs) which describe the data spatial variations, while the time variations are represented by the Principal Components (PCs) which are arranged row-wise in matrix $V_T$. Then applying the SVD to the 2D matrix, the resulting U matrix, providing the spatial information, can be rearranged as a 3D sequence \citep{Ibarra-Castanedo2006}. The whole procedure is illustrated in Fig. \ref{PCT_SVD}.
 \begin{figure}[htbp]
 	\centering
 	\subfloat[Thermographic data rearrangement from a 3D sequence to a 2D matrix]
@@ -231,3 +231,5 @@ The advantages of using COMSOL Multiphysics for modeling:
 One example of application of COMSOL simulation in infrared thermography for NDT \& E can be found in \citep{Cannas2012Modeling}. Where a small concrete wall with an inside cavity was heated by two halogen lamps to detect the defects position. A 3D model by finite element method under COMSOL platform has also been implemented to simulate the heating process. Experimental and numerical data have well matched, which allows parametric studies free from the experimental tests.
 
 %All simulation parameters and conditions can be found in corresponding chapters.
+%\bibliographystyle{plainnat}              % style de la bibliographie
+%\bibliography{U:/Desktop/Bibliography/Biblio_th} 

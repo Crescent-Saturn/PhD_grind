@@ -5,7 +5,7 @@
 \section{ATP background}
 As one major procedure of the cold chain concept, the correct transport of perishable foodstuffs in refrigerated vehicles is a critical link in the food chain not only in terms of maintaining the temperature integrity of the transported products but also its impact on energy consumption and CO$_2$ emissions. Referring this, the  commercial food sector, including agriculture, food manufacture transport and retail are responsible for the total greenhouse gas emissions in whole world.
 
-According to a report \citep{watkiss2005validity}, food manufacture distribution estimated to be responsible for 1.8\% of the total emission. Due to a variety of operating conditions and constraints, transport refrigeration equipment operation needs more rigorous environment, such as suitable temperature controlled handling and storage facilities that can maintain food at appropriate temperatures and enable these temperatures to be monitored controlled and recorded. There are also specific temperature requirements for certain categories of food, one example is given in Fig. \ref{tem_reqs} \citep{tem_reqs}.
+According to a report \citep{watkiss2005validity}, food manufacture distribution estimated to be responsible for 1.8\% of the total emission. Due to a variety of operating conditions and constraints, transport refrigeration equipment operation needs more rigorous environment, such as suitable temperature controlled handling and storage facilities that can maintain food at appropriate temperatures and enable these temperatures to be monitored controlled and recorded. There are also specific temperature requirements for certain categories of food, one example is given in Fig.~\ref{tem_reqs}. %\citep{tem_reqs}.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.9]{art/temp_reqs}
@@ -15,7 +15,7 @@ According to a report \citep{watkiss2005validity}, food manufacture distribution
 
 Therefore cooling is essential to avoid food deterioration and market losses.  During transport and storage, the quality of these products might change rapidly as they confront a variety of risks leading to material quality losses. In particular, metabolic activities generally increase as storing temperatures are elevated. Short interruptions during the cold chain control may result in immediate deterioration of product quality \citep{Nunes2003Quality}. In addition, local temperature can occur in almost any transport situation. There are several reports from literature which indicate that gradients of 5 degrees or more, deviations of only a few degrees can lead to spoiled products and thousands of dollars lost \citep{Tanner2003Modelling, Nunes2006Brief, Rodriguez-Bermejo2007Thermal}.
 
-Above all, the transport of perishable food products, other than fruit and vegetables, and the equipment used for the carriage of these products is governed by an agreement drawn by The Inland Transport Committee of the United Nations Economic Committee for Europe (UNECE) in 1970-1971 \citep{Geneva1970}. The aim is to facilitate international traffic by setting common internationally recognised standards. The agreement is known as the ATP agreement and was firstly signed by Austria, West Germany, Italy, Luxembourg, Netherlands, Portugal, and Switzerland.  It provides common standards for temperature controlled transport vehicles such as road vehicles, railway wagons and sea containers and sets down the tests to be done on such equipment for certification purposes. Up to 2016, there are 50 states are party to ATP \citep{ATP_wiki}.
+Above all, the transport of perishable food products, other than fruit and vegetables, and the equipment used for the carriage of these products is governed by an agreement drawn by The Inland Transport Committee of the United Nations Economic Committee for Europe (UNECE) in 1970-1971 \citep{Geneva1970}. The aim is to facilitate international traffic by setting common internationally recognised standards. The agreement is known as the ATP agreement and was firstly signed by Austria, West Germany, Italy, Luxembourg, Netherlands, Portugal, and Switzerland.  It provides common standards for temperature controlled transport vehicles such as road vehicles, railway wagons and sea containers and sets down the tests to be done on such equipment for certification purposes. Up to 2016, 50 states are party to ATP \citep{ATP_wiki}.
 
 
 According to ATP classification, insulated vehicle bodies are classified as: motor vehicle/panel van, rigid box/lorry, semi-trailer, container or tanker. And its overall coefficient of heat exchange value (known as $K$-value or $K$ coefficient) is given by:
@@ -241,5 +241,243 @@ The experimental results (Fig \ref{cooling_res}) have shown that the technique h
 
  
 %Still, the limitation of that proposed method in this literature is only by natural convection. %Our work will apply the forced convection by spraying the nitrogen gas.
-\newpage
-\input{main/issue}
+%\newpage
+%\input{main/issue}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Issue, hypothesis and objectives}
+\phantomsection\addcontentsline{toc}{section}{Issue, hypothesis and objectives}
+\subsection{Issue}
+
+Following recent decades, the public is becoming increasingly aware of the need to apply rigorous standards throughout the food chain.
+
+In this project, we want to improve these tests by developing quantitative methods for identifying thermal insulation anomalies in refrigerated vehicles for the transport of food. We also want to develop an aging model of the panels constituting the refrigerated "box" of the vehicle to predict its remaining useful life. The implementation of improved tests will ensure food safety during the transportation of refrigerated food.
+Indeed, the coefficient k of a vehicle with a tendency in time to decrease because of the aging of the insulating panels (migration of the insulating gases out of the foam panels, detachments of the walls following the mechanical stresses undergone by the vehicle, etc.) . Currently the standards only require testing at commissioning and afterwards at six years. This duration is probably too long and a quantitative model allowing a prediction of the evolution of the coefficient $K$ would add rigor to the current process. In addition, the imposed measurement tests of $K$ are essentially done on each of the faces, without taking into account the corner zones which are especially at risk. Infrared thermography would identify and quantify local thermal anomalies so as to establish an overall measure of $K$ more accurate while "sounding the alarm" in case of serious failure.
+
+On the other hand, tradition active infrared thermography with heating stimulation device can be impossible to detect thermal insulation anomalies directly in refrigerated vehicle, since it would be too difficult to heat the entire vehicle ``box". Therefore, the idea of cold approach (compressed air, liquid nitrogen, etc.) comes up having its own advantages under this circumstance: it will be more economical than the heating approach, and more beneficial since there is less thermal noises.
+
+\subsection{Hypothesis}
+For the part of the application of infrared thermography in ``cold food chain", the heat exchange coefficients inside and outside of the insulated ``box" will be constant when the ATP standard test arrives at a stable condition. Moreover, the heat diffusion will be mainly one dimension.
+
+For the part of the exploration of cold approaches in infrared thermography, heat propagation will have the same performance, since the material conductivity will not change whether in hot approach or the cold one.
+\subsection{Objectives}
+In this project, we are particularly interested in the ``cold chain" and more particularly the transport of food in refrigerated vehicles (ie trucks, trailers, containers). The transportation of dairy products, meat and frozen foods are especially at risk. In addition, the ever-increasing cost of energy makes it possible to limit refrigeration to a minimum. It is therefore essential to ensure an irreproachable thermal insulation during the inspection of refrigerated vehicles. There are thermal insulation compliance tests to ensure satisfactory food transportability \citep{Geneva1970}. During these tests, measurements of heat transfer coefficients are measured (coefficient $ K $). Nonetheless, if there are some local flaws or thermal bridges inside the panels, which could not be measured by ATP tests, then the insulation can no longer be guaranteed. Infrared thermography can be particularly helpful regarding these issues. %On the other hand this measure proves rather rough. In this project, we want to improve these tests.
+
+To this end, three objectives will be pursued in this thesis:
+\begin{itemize}
+	\item \textbf{Objective 1$ ^\circ $ } - Development of quantitative methods for identifying thermal insulation anomalies in refrigerated vehicles for the transport of food.
+	\item \textbf{Objective 2$ ^\circ $ } - Development of an aging model of panels constituting the refrigerated ``box" of the vehicle in order to predict its objective remaining useful lives. 
+	\item \textbf{Objective 3$ ^\circ $ } - Development of a model using a cold stimulation device to identify thermal insulation anomalies in insulated materials.
+\end{itemize}
+
+The achievement of these three objectives of this thesis requires the following specific tasks (which can be carried out in parallel):
+
+\S 1.1 Establishment of a thermal image database on a maximum of refrigerated vehicles. §1.2 In parallel, laboratory tests on a refrigerated "box" of reduced size placed in a climatic chamber will allow the elaboration of a first model of thermal behavior. §1.3 First approaches to the treatment of infrared images (identification of anomalies - at the junctions of the panels).
+
+\S 2.1 Stripping of images from the bank will be done and image processing approaches will be developed to identify areas of anomalies. The images will be segmented and the thermal parameters will be calculated since the images will have been acquired under specified conditions \citep{Ibarra-Castanedo2013Methods}. §2.2 The refrigerated "box" will be subjected to mechanical and thermal stresses in order to accelerate its aging which will allow a validation of the model of thermal behavior. Realistic artificial defects (based on the knowledge acquired in §1.1 will also be realized in the ``box"). §2.3 A test campaign for final validation (it should be possible to validate a certain aging by comparing the current results with previous measurements by re-testing some vehicles measured in advance. § 1.1). §2.4 Latest improvements to the thermal prediction model.
+
+\S 3.1 Attempt of identifying defects in insulated material with infrared thermography by a cold stimulation (compressed air, liquid nitrogen, etc.) \S 3.2 Comparison with traditional heating approaches in infrared thermography for Non-Destructive Testing. \S 3.3 Comparison in modeling and simulation tests.
+
+\section{Methodology}
+Thought infrared thermography has the advantages such as fast inspection, ease of deployment, contactless, security and easy access to results with the imaging capabilities, raw infrared thermography results is difficult to handle and analyze in case of reflections and non-uniform external stimulation. To improve the inspection results, there are various post-processing techniques which have been developed. The recently popular data analyzing and processing methods are presented in detail in the following subsections.
+\subsection{Fourier Transform (FT)}
+Among all data processing methods, Fourier Transform (FT) is particularly interesting because it helps retrieve phase and amplitude data from raw results, since our principal results are images, which can be seen as signals with two dimensions.
+
+It is well-known that any wave-form, periodic or not, can be approximated by the sum of purely harmonic waves oscillating at different frequencies. The Continuous Fourier Transform (CFT) is then given by:
+\begin{equation}
+F(\omega) = \int_{-\infty}^{\infty}f(t)e^{-j\omega t}dt = A(\omega)e^{i\phi(\omega)}
+\end{equation}
+where $\omega = 2 \pi f$. the FT technique serves to transform the perception of signal from a time-based domain to a frequency-based domain.
+
+In case of discrete situation, the Discrete Fourier Transform (DFT) is possible to analyze the data in the frequency domain:
+\begin{equation}
+F_n = \Delta t \sum_{k=0}^{N-1}T(k\Delta t)e^{-\tfrac{i2\pi nk}{N}} = \Re(F_n) + i\Im(F_n)
+\label{DFT}
+\end{equation}
+where $n$ designates the frequency increment ($n=0, 1, ..., N$), $\Delta t$ is the sampling interval, $N$ is the total number of infrared images, and $\Re$ and $\Im$ are the real and the imaginary parts of the transform, respectively.
+DFT is often applied in Pulsed Phase Thermography (PPT), which analyzes phase data obtained from PT results. In addition, the Fast Fourier Transform (FFT) algorithm is often applied to reduce computation time.
+
+\subsection{PPT}
+From Eq.\ref{DFT}, amplitude $A_n$ and phase delay $\Phi_n$ are given by:
+\begin{equation}
+A_n = \sqrt{\Re(F_n)^2 + \Im(F_n)^2} \qquad \Phi_n = \tan^{-1}\frac{\Re(F_n)}{\Im(F_n)}
+\end{equation}
+It should be noted here that The processed sequence is less affected than the original data by undesired noise
+sources such as environmental reflections, emissivity variations, non-uniform heating.
+
+By selecting two pixels, the first in correspondence of a reference zone, the second in correspondence of a possible defect zone, and following both of them in time, after the pulse, the two profiles shown in Fig. \ref{T_profile_PPT} are obtained. By taking the FFT of the two signals, the two profiles of amplitude (Fig. \ref{FT_AM_profile_PPT}) and phase (Fig. \ref{FT_PH_profile_PPT})
+as a function of frequency are obtained.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.35]{art/T_profile_PPT}
+	\caption{Temperature profiles of a reference zone (blue) and a defect zone (red)}
+	\label{T_profile_PPT}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.35]{art/FT_AM_T_profile_PPT}
+	\caption{Amplitude as a function of frequency: blue reference, red defect}
+	\label{FT_AM_profile_PPT}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.35]{art/FT_PH_T_profile_PPT}
+	\caption{Phase as a function of frequency: blue reference, red defect}
+	\label{FT_PH_profile_PPT}
+\end{figure}
+
+\subsection{Differential Absolute Contrast (DAC)}
+Traditionally, once the temperature of a sound area (reference zone)$T_s(t) $ and that of a defect zone $T_{def}(t) $ are known, contrast methods can be applied by simply:
+\begin{equation}
+C_{ac}(t) = T_{def}(t) - T_s(t)
+\label{AC_eq}
+\end{equation}
+which is known as the absolute contrast. However, this method becomes inconvenient when the sound area cannot be practical defined. In addition, the common case of non-uniform heating has a strong effect on the results.
+
+To improve this, the Differential Absolute Contrast (DAC) has proven its amelioration for non-uniform heating situations\citep{Benitez2008, pilla2002new}.
+
+DAC method starts from Eq. \ref{PT_eq}, the surface temperature increase based on one-dimensional model of the Fourier equation after an instantaneous Dirac heating pulse is applied:
+\begin{equation}
+\Delta T = T(0,t) - T_0  = \frac{Q}{e\sqrt{\pi t}}
+\label{PT_eq_2}
+\end{equation}
+The temperature of the sound area at the surface ($z=0$) $T_s$ at time $t_1$ is given by:
+\begin{equation}
+\Delta T_s(t_1) = \frac{Q}{e\sqrt{\pi t_1}}
+\end{equation}
+Then at time $t$, the temperature can be written as:
+\begin{equation}
+\Delta T_s(t) = \frac{Q}{e\sqrt{\pi t_1}} = \sqrt{\frac{t_1}{t}}\cdot \Delta T(t_1)
+\end{equation}
+where $t_1$ is a time between the thermal pulse lasting and the time at which the first temperature spot of the subsurface defects appear.\\
+The absolute temperature contrast (Eq. \ref{AC_eq}) can be rewritten as:
+\begin{align}
+C_{ac}(t) = & [T_{def}(t) -T_0] - [T_s(t) - T_0] \\ 
+= & \Delta T_{def}(t) - \sqrt{\frac{t_1}{t}}\cdot \Delta T(t_1)
+\end{align}
+DAC Applications on different type of material samples can be found in \citep{pilla2002new}, which has proven this method has an effective improvement on the signal to noise ratio.
+
+\subsection{Temperature Signal Reconstruction (TSR)}
+The thermographic signal reconstruction (TSR) data processing technique is one of the most recent improvements which raise thermography to the level of the most established NDE techniques \citep{shepard2003reconstruction, Balageas2015}.
+
+Same as DAC method, Eq. \ref{PT_eq_2} can be rewritten  in logarithmic way as:
+\begin{equation}
+\log (\Delta T) = \log (\frac{Q}{e}) - \frac{1}{2}\log (\pi t)
+\end{equation}
+In a general way, as: %with degree $n$:
+\begin{equation}
+\log (\Delta T) = a_0 + a_1\log (t) + a_2[\log (t)]^2 +...+ [a_n\log(t)]^n
+\end{equation}
+This technique usually consists in the fitting of the experimental log-log plot by a polynomial of degree $n$, and also in the computation of the 1$^{st}$ and 2$^{nd}$ derivatives of the thermograms.
+
+In practice, logarithmic data may vary from ideal one-dimensional behavior for a variety of reasons (e.g. material inhomogeneities, nonlinear camera response or background radiation contributions). Nevertheless, the logarithmic behavior exhibits remarkable consistency, in that pixels representing defect free areas are nearly linear, and pixels corresponding to subsurface defects depart from the near-linear signature at a particular time that is correlated to the depth of the defect \citep{Shepard2002,Shepard2003}.
+
+
+\subsection{Principal Component Thermography (PCT)}
+Principal Component Analysis (PCA) is a statistical analysis tool used for identifying patterns in data and expressing the data in a way to highlight the similarities and differences in patterns. When data dimension is very high, the pattern matching of the data then becomes very difficult. Thus, PCA comes to extract features and reduce redundancy by projecting the data onto a system of orthogonal components, which is known as PCT \citep{Rajic2002,Rajic2002a}. 
+
+Singular Value Decomposition (SVD) is often used in PCA. Generally, a matrix $M$ of $m\times n$ can be decomposed in the form of:
+\begin{equation}
+A = U R V^T
+\end{equation}
+where $U$ is an $M\times N$ unitary matrix, $R$ is a diagonal $N \times N$ matrix with non-negative real numbers on the diagonal, $V$ is an $N\times N$ unitary matrix, and $V^T$ is the conjugate transpose of $V$.
+
+The 3D thermogram matrix needs to be reorganized as a 2D $M\times N$ matrix $A$ with the dimension of time along the columns and space. The columns of $U$ represent a set of orthogonal statistical modes known as Empirical Orthogonal Functions (EOFs) which describe the data spatial variations, while the time variations are represented by the Principal Components (PCs) which are arranged row-wise in matrix $V_T$. Then applying the SVD to the 2D matrix, the resulting U matrix, providing the spatial information, can be rearranged as a 3D sequence \citep{Ibarra-Castanedo2006}. The whole procedure is illustrated in Fig. \ref{PCT_SVD}.
+\begin{figure}[htbp]
+	\centering
+	\subfloat[Thermographic data rearrangement from a 3D sequence to a 2D matrix]
+	{
+		\includegraphics[scale=0.7]{art/PCT_SVD_1}
+	}
+	\\
+	\subfloat[Rearrangement of a 2D matrix into a 3D matrix containing the EOFs]
+	{
+		\includegraphics[scale=0.7]{art/PCT_SVD_2}
+	}
+	\caption{PCT algorithm procedure}
+	\label{PCT_SVD}
+\end{figure}
+
+Beyond reducing redundancy, PCT is also proposed as a contrast enhancement approach.
+The entire results obtained in this thesis are mostly post-processed by PCT method.
+
+\subsection{Receiver Operating 	Characteristic (ROC)}
+The Receiver operating characteristic (ROC) curve is a technique in statistics which helps visualize, organize and select classifiers based on their performance. ROC graphs have long been used in different fields as signal detection \citep{swets2000better}, diagnostic systems\citep{swets1988measuring}, medical decision\citep{zou2002receiver}, and the earliest one in machine learning\citep{spackman1989signal}. While being frequently chosen a standard method in several scientific fields, ROC are rarely applied in the thermographic field.\citep{Bison2014a}.
+
+\subsubsection{ROC concept}
+Basically, a classification model (classifier or diagnosis) is a mapping of instances between certain classes/groups. For a two-class prediction problem (also known as binary classification), in which the results are marked either as positive ($p$) or negative ($n$). Then there are four results in a binary classification. Therefore, given an instance, it the instance is positive and it is classified as positive, it is called as a \textit{true positive}; if it is classified as negative, it is called as a \textit{false negative}. If the instance is negative and it is classified as negative, it is called as a \textit{true negative}; if it is classified as positive, it is called as a \textit{false positive}. When given a set of instances, a two-by-two confusion matrix (also called a contingency table) can be constructed representing the dispositions of the set of instances. 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=1.2]{art/ROCintro_1}
+	\caption{Confusion matrix}
+	\label{ROCintro_1}
+\end{figure}
+
+The parameters' rates in Fig. \ref{ROCintro_1} are calculated as following:\\
+The \textbf{true positive rate} (also called \textit{recall}):
+\begin{equation}
+tp\; rate = \frac{\Sigma \; \text{True positives}}{\Sigma \; \text{Total positives (or Condition positives)}}
+\end{equation}
+The \textbf{false positive rate} (also called \textit{false alarm rate}):
+\begin{equation}
+fp\; rate = \frac{\Sigma \; \text{False positives}}{\Sigma \; \text{Total negatives (or Condition negatives)}}
+\end{equation}
+
+Additional rates associated are defined as:\\
+The \textbf{true negative rate} (also called \textit{specificity}): 
+\begin{equation}
+tn\; rate = \frac{\Sigma \; \text{True negatives}}{\Sigma \; \text{Total negatives (or Condition negatives)}}
+\end{equation}
+The \textbf{false negative rate}:
+\begin{equation}
+fn\; rate = \frac{\Sigma \; \text{False negatives}}{\Sigma \; \text{Total positives (or Condition positives)}}
+\end{equation}
+And:
+\begin{equation*}
+\text{sensitivity} = \text{recall}
+\end{equation*}
+
+\subsubsection{ROC space}
+The corresponding ROC curve graph is created by plotting the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings \citep{Fawcett2006}.  Since TPR is equivalent to sensitivity and FPR is equal to 1 − specificity, the ROC graph is also called the sensitivity vs (1 − specificity) plot. In the ROC space, each prediction result or instance of a confusion matrix represents one point. Fig. \ref{ROC_space} shows one example of four prediction points.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.56]{art/ROC_space-2}
+	\caption{The ROC space}
+	\label{ROC_space}
+\end{figure}
+There are several points in ROC space which are important to note. The lower left point $ (0,0) $ represents the strategy of never issuing a positive classification; such a classifier commits no false positive errors but also gains no true positives. The opposite strategy, of unconditionally issuing positive classifications, is represented by the upper right point $ (1,1) $. The point $ (0,1) $ represents perfect classification.  Informally, one point in ROC space is better than another if it is to the northwest (tp rate is higher, fp rate is lower, or both) of the first. In the figure, $C'$ has the best performance as shown.
+
+The diagonal line (also called \textit{line of no-discrimination}) $y = x$ represents the strategy of randomly guessing a class. For example, if a classifier randomly guesses the positive class half the time, it can be expected to get half the positives and half the negatives correct; this yields the point $ (0.5, 0.5) $ in ROC space. The diagonal divides the ROC space. Points above the diagonal represent good classification results (better than random), points below the line represent poor results (worse than random). Note that the output of a consistently poor predictor could simply be inverted to obtain a good predictor. As $C$ and $C'$ shown in the figure.
+
+In conclusion,  any classifier that produces a point in the lower right triangle can be negated to produce a point in the upper left triangle. Any classifier on the diagonal may be said to have no information about the class.
+
+\subsubsection{Area under curve analysis}
+In ROC analysis, a common method to compare different classifiers is to calculate the area under the ROC curve, known as AUC\citep{Fawcett2006}. In this way, a single scalar value will represent the expected performance of the classifiers. As in the ROC curve profile, the AUC is a part of the unit square are, therefore, its value will be between 0 and 1. Thus, random guessing classifier produces a diagonal line between (0,0) and (1,1), which has an area of 0.5. It can be then indicated that a classifier AUC value less than 0.5 is even worse than a random guessing. 
+
+An important statistical property of the AUC is that a classifier's AUC value is equivalent to the probability that the classifier will rank a randomly chosen positive instance higher than a randomly chosen negative instance. 
+
+\section{Modeling and simulation}
+In this thesis, all modeling and simulation work are undertaken in the platform COMSOL Multiphysics{\textregistered}, which might be helpful when comparing with the experimental results.
+%\section{Introduction to COMSOL Multiphysics}
+
+COMSOL Multiphysics is a general-purpose software platform, based on advanced numerical methods, for modeling and simulating physics-based problems. It is a finite element analysis, solver and Simulation software / Finite Element Analysis (FEA) Software package for various physics and engineering applications, especially coupled phenomena, or multiphysics.
+
+The advantages of using COMSOL Multiphysics for modeling:
+\begin{itemize}
+	\item COMSOL Multiphysics has an integrated modeling environment.
+	\item COMSOL Multiphysics takes a semi-analytic approach: once questions specified, COMSOL symbolically assembles finite-element method matrices and organizes the bookkeeping.
+	\item COMSOL Multiphysics is fully compatible with MATLAB, so user could define programming for the modeling,organizing the computation, or the post-processing has full functionality. COMSOL Script is a MATLAB-like integrated programming environment that can also provide these facilities.
+	\item COMSOL Multiphysics provides pre-built templates as Application Modes and in the Model Library for common modeling applications.
+	\item COMSOL Multiphysics provides multiphysics modeling--linking well known ``application modes" transparently.
+	\item COMSOL Multiphysics innovated extended multiphysics--coupling between logically distinct domains and models that permits simultaneous solution.
+\end{itemize}
+
+
+One example of application of COMSOL simulation in infrared thermography for NDT \& E can be found in \citep{Cannas2012Modeling}. Where a small concrete wall with an inside cavity was heated by two halogen lamps to detect the defects position. A 3D model by finite element method under COMSOL platform has also been implemented to simulate the heating process. Experimental and numerical data have well matched, which allows parametric studies free from the experimental tests.
+
+\bibliographystyle{plainnat}              % style de la bibliographie
+\bibliography{U:/Desktop/Bibliography/Biblio_th} 
