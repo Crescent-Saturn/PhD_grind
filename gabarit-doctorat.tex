@@ -26,10 +26,11 @@
   \makenomenclature
   
   \usepackage{chapterbib}
-  \usepackage[sectionbib, authoryear,square]{natbib}
+  % \usepackage[sectionbib, authoryear,square]{natbib}
+  \usepackage[sectionbib, numbers,square]{natbib}
   
   \renewcommand{\nomname}{List of Acronyms}
-  \renewcommand{\bibname}{Reference}  
+  % \renewcommand{\bibsection}{Reference} 
 
 %  \usepackage{paralist}  % Paralist items
   %% Utilisation d'une autre police de caractères pour le document.
@@ -64,7 +65,8 @@
 %% de \extrasfrench parce que c'est la dernière langue déclarée dans
 %% \documentclass, ci-dessus.
 \addto\extrasenglish{%
- \renewcommand{\bibsection}{\section*{\bibname}\prebibhook}}
+ % \renewcommand{\bibsection}{\section*{\bibname}\prebibhook}}
+ \renewcommand{\bibsection}{\section*{Reference}\prebibhook}}
 
   %% Style de la bibliographie.
 %  \setcitestyle{numbers, square}
