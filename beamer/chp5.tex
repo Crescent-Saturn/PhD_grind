@@ -2,4 +2,231 @@
 \subsection{Liquid Nitrogen Cooling in IR Thermography applied to steel specimen}
 \frame{\tableofcontents[currentsection,currentsubsection]}
 
+\begin{frame}{Outline}
+    \begin{columns}
+      \column{0.5\textwidth}
+           \begin{itemize}
+                \item Stimulation Techniques:
+                \begin{itemize}
+                    \item Pulse Thermography
+                    \item Lock-in Thermography
+                    \item Liquid Nitrogen cooling
+                \end{itemize}
+            \end{itemize}
+      \column{0.5\textwidth}
+      \pause
+      \centering
+      \includegraphics[scale=0.26]{img/ch5/Outline_tech.jpg}
+    \end{columns}
+\end{frame}
 
+\begin{frame}{Outline}
+    \begin{columns}
+        \column{0.5\textwidth}
+            \begin{itemize}
+                \item Processing Methods:
+                \begin{itemize}
+                    \item Principal Component Thermography (PCT)
+                    \item FFT Amplitude \& Phase
+                    \item Receiver Operating Characteristic (ROC) curve analysis
+                \end{itemize}  
+            \end{itemize}
+        \column{0.5\textwidth}
+        \pause
+      \centering
+      \includegraphics[scale=0.28]{img/ch5/Outline_analy.jpg}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Specimen dimensions}
+    Steel with Flat Bottom holes:
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.3]{img/ch5/specimen_schema.pdf}
+    \end{figure}
+
+
+\end{frame} 
+
+
+\begin{frame}{Experimental Set-up}
+    Hot Stimulation:
+    \begin{figure}
+        \centering
+        \subfloat[Flash stimulation]{
+            \includegraphics[scale=0.33]{img/ch5/ch5_flash_setup.png}
+        }
+        \subfloat[Lock-in Stimulation]{
+            \includegraphics[scale=0.33]{img/ch5/ch5_lockin_setup.png}
+        }
+       \caption{Experimental set-up in the \textit{reflection} mode}
+    \end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Experimental Set-up}
+    LN$_2$ Cooling:
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.5]{img/ch5/ch5_ln2_setup.png}
+    \end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Experimental Set-up}
+    Equipments' detail:
+    \begin{itemize}
+        \item Infrared Camera FLIR SC3000 (spatial resolution equal to 320$\times$240 pixels, frame rate up to 50Hz, GaAs sensor, spectral range 8-9 $\mu m$)
+        \item Two pairs of flash lamps for a total of 10 kJ (electric) released in 5 $ms $ 
+        \item One pair of modulated halogen lamps with 1kW each served as Lock-in    stimulation   
+        \item An isolated bottle (500 ml) filled with  Liquid Nitrogen.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Results--\small{Thermal raw images:}}
+    % \small{Thermal raw images:}
+    \begin{figure}
+     % \centering
+     \vspace{-18pt}
+       \subfloat[Flash raw frame 23]
+       {
+          \includegraphics[scale=0.35]{img/ch5/flash_raw23_2.png}
+       }
+       % \hspace{10pt}
+       \subfloat[Flash raw frame 60]
+       {
+          \includegraphics[scale=0.35]{img/ch5/flash_raw60_2.png}
+       }
+       % \hspace{10pt}
+       \\
+       \vspace*{-10pt}
+       \subfloat[LN$_2$ raw frame 41]
+       {
+          \includegraphics[scale=0.35]{img/ch5/cool_raw_2.png}
+       }
+       \caption{Thermal raw images of PT and LN$_2$ stimulation techniques}      
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Results--\small{Lock-in FFT images}}
+    \begin{figure}
+        \vspace*{-18pt}
+        \hspace*{-15pt}
+        \subfloat[LIT4 FFT in amplitude]
+        {
+          \includegraphics[scale=0.31]{img/ch5/LIT4_AMP.png}
+        }
+        \subfloat[LIT8 FFT in amplitude]
+        {
+          \includegraphics[scale=0.31]{img/ch5/LIT8_AMP.png}
+        }
+        \subfloat[LIT16 FFT in amplitude]
+        {
+          \includegraphics[scale=0.31]{img/ch5/LIT16_AMP.png}
+        }        
+        \\
+        \hspace*{-15pt}
+        \subfloat[LIT4 FFT in phase]
+        {
+          \includegraphics[scale=0.31]{img/ch5/LIT4_PHA.png}
+        }
+        \subfloat[LIT8 FFT in phase]
+        {
+          \includegraphics[scale=0.31]{img/ch5/LIT8_PHA.png}
+        }
+        \subfloat[LIT16 FFT in phase]
+        {
+          \includegraphics[scale=0.31]{img/ch5/LIT16_PHA.png}
+        }
+
+        \caption{FFT in amplitude and phase results for LIT}      
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{Results--\small{PCT results}}
+    \begin{figure}
+        % \hspace*{-10pt}
+        \subfloat[Flash PCT 2nd image]
+        {
+          \includegraphics[scale=0.315]{img/ch5/Flash_PCT_2.png}
+        }
+        \subfloat[LN$_2$ PCT 2nd Image]
+        {
+          \includegraphics[scale=0.315]{img/ch5/Cool_PCT_2.png}
+        }   
+        \\
+        \vspace*{-6pt}
+        \hspace*{-15pt}
+        \subfloat[LIT4 PCT 3rd Image]
+        {
+          \includegraphics[scale=0.315]{img/ch5/LIT4_PCT_3.png}
+        }
+        \subfloat[LIT8 PCT 3rd Image]
+        {
+          \includegraphics[scale=0.315]{img/ch5/LIT8_PCT_3.png}
+        }
+        \subfloat[LIT16 PCT 3rd Image]
+        {
+          \includegraphics[scale=0.315]{img/ch5/LIT16_PCT_3.png}
+        }
+        \caption{PCT results of corresponding technique}      
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{Results--\small{ROC curves}}
+    \begin{figure}[ht]
+       \centering
+       \subfloat[Binary map of defects]
+       {
+          \includegraphics[scale=0.195]{img/ch5/Schema_done.png}
+       }
+       \subfloat[Cool map]
+       {
+          \includegraphics[scale=0.8]{img/ch5/Cool_ROC.png}
+       }   
+       \caption{One example of ROC analysis (LN$_2$ results) and binary map of defect locations}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Results--\small{ROC curves}}
+    \begin{figure}
+        \centering
+            \includegraphics[scale=0.35]{img/ch5/ROC_PCT_2017.pdf}
+        \\
+            \includegraphics[scale=0.35]{img/ch5/ROC_LIT_AMP_2017.pdf}
+            \includegraphics[scale=0.35]{img/ch5/ROC_LIT_PHA_2017.pdf}
+        \caption{ROC curves for LIT processing results}
+    \end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Results--\small{AUC values}}
+Area under curve analysis and comparison:
+    \begin{figure}[ht]
+        \vspace*{-5pt}
+        \centering
+        \includegraphics[scale=0.32]{img/ch5/AUC_Value.png}
+        \caption{AUC value comparison}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Discussion}
+    \begin{itemize}[<+->]
+    \pause
+        \item All techniques highlight part of the flaws in the sample
+        \item PCT post-processing method displays a better results for all procedures
+        \item More defects are exhibited in Flash stimulation with PCT processing
+        \item ROC curve analysis and its AUC analysis have elucidated a  straightforward classification comparison
+        \item The best values are obtained with the Flash technique with PCT processing, trailed narrowly by the Liquid Nitrogen method.
+    \end{itemize}
+\end{frame}
