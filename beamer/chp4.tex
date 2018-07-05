@@ -2,3 +2,107 @@
 \subsection{Detection of insulation flaws and thermal bridges in insulated truck box panels}
 \frame{\tableofcontents[currentsection,currentsubsection]}
 
+\begin{frame}{Outline}
+    ATP standard tests: \textbf{Global} results
+
+    \textbf{Local} defects ==> \alert{Infrared Thermography}
+\end{frame}
+
+
+\begin{frame}{Methods--Specimen}
+    \begin{figure}[ht]
+    % \centering
+    \hspace*{-20pt}
+    \subfloat[Panel detail]
+    {
+        \includegraphics[scale=0.35]{img/ch4/Panel_detail.png}
+    }
+    \pause
+    \subfloat[Panel done]
+    {
+        \includegraphics[scale=0.265]{img/ch4/Panel_done.jpg}
+    }
+    \caption{Truck panel specimen}
+    \end{figure}
+ 
+\end{frame}
+
+
+\begin{frame}{Experimental Set-up}
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.4]{img/ch4/Exp.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{SImulation models}
+ The governing pure conduction equation:
+    \begin{equation*}
+        \rho C_p \frac{\partial T}{\partial t}-\nabla \cdot (k\nabla T) = 0
+    \end{equation*}
+The boundary condition (convection and radiation):
+    \begin{equation*}
+        n(k\nabla T) = q_0 + h_{cv}(T_{amb}-T)+\sigma \epsilon(T_{amb}^4-T^4)
+    \end{equation*}
+\pause
+    \begin{description}
+        \item[Lamp {\color{red}{Heating}}] \textit{Heat transfer in Solid with surface-to-surface Radiation} module  
+        \item[{\color{cyan}{Air Cooling}}] Heat transfer and CFD modules    
+    \end{description}
+\end{frame}
+
+\begin{frame}{Mesh}
+    \begin{figure}[ht]
+    % \centering
+    \hspace*{-22pt}
+    \subfloat[Lamp {\color{red}{Heating}} meshes]
+    {
+        \includegraphics[scale=0.38]{img/ch4/Mesh_flash.png}
+    }
+    % \pause
+    \subfloat[Air {\color{cyan}{Cooling}} meshes]
+    {
+        \includegraphics[scale=0.38]{img/ch4/Mesh_laminar.png}
+    }
+    \caption{Simulation meshes}
+    \end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Results}
+Experimental results:
+
+\begin{figure}
+    \hspace*{-20pt}
+    \subfloat[Lamp {\color{red}{Heating}}]
+    {
+        \includegraphics[scale=0.42]{img/ch4/Heat_FT_AMP.png}
+    }
+    \subfloat[Air {\color{cyan}{Cooling}}]
+    {
+        \includegraphics[scale=0.42]{img/ch4/Cool_PCT3_2.png}
+    }
+    \caption{Experimental results (PCT 3rd image)}
+
+\end{figure}
+\end{frame}
+
+\begin{frame}{Results}
+Computational results:
+
+\begin{figure}
+    \hspace*{-20pt}
+    \subfloat[Lamp {\color{red}{Heating}}]
+    {
+        \includegraphics[scale=0.50]{img/ch4/Truck_panel_flash_03.png}
+    }
+    \hspace*{8pt}
+    \subfloat[Air {\color{cyan}{Cooling}}]
+    {
+        \includegraphics[scale=0.50]{img/ch4/Truck_panel_laminar_final_7_3.png}
+    }
+    \caption{Computational results}
+
+\end{figure}
+\end{frame}
