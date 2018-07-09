@@ -20,7 +20,7 @@
 \end{frame}
 
 
-\begin{frame}{Image processing--spherical projection}
+\begin{frame}{Image processing--\small{spherical projection}}
     \begin{figure}
         % \centering
         \hspace*{-15pt}
@@ -31,7 +31,7 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Image processing--spherical projection}
+\begin{frame}{Image processing--\small{spherical projection}}
 Therefore, given the focal length $ f $ and the image coordinates $ (x, y) $, the corresponding spherical coordinates $ (x', y') $ are:
 
     \begin{align*}
@@ -43,7 +43,7 @@ where $ (x_c,y_c) $ are the center coordinates of the spherical image.
 \end{frame}
 
 
-\begin{frame}{Image processing--spherical projection}
+\begin{frame}{Image processing--\small{spherical projection}}
 The original image and its spherical projection are then:
     \begin{figure}
         % \centering
@@ -56,7 +56,7 @@ The original image and its spherical projection are then:
 \end{frame}
 
 
-\begin{frame}{Image projection--Harris corner}
+\begin{frame}{Image projection--\small{Harris corner}}
     \begin{figure}
         %   \centering
         \hspace*{-15pt}
@@ -66,4 +66,91 @@ The original image and its spherical projection are then:
         % \label{Harris}
     \end{figure}
     % In these two continuous images, the IR camera scanned from top to bottom inside the vehicle and there is a ``clear" (from our vision) overlapping part (left bottom part in the first and left top part in the second) in these two images. However, from the Harris corners detection results, all the features obtained could not be matched correctly.
+\end{frame}
+
+
+\begin{frame}{Image translation and stitching}
+    \begin{figure}
+        \centering
+        \vspace*{-10pt}
+        \includegraphics[scale=0.3]{img/ch3/img_trs.jpg}\\
+        \pause
+        \includegraphics[scale=0.3]{img/ch3/img_sti.jpg}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Temperature panorama}
+    \begin{figure}
+        \hspace*{-15pt}
+        \includegraphics[scale=0.222]{img/ch3/Pano_T_Final.jpg}
+    \end{figure}
+    \centering
+    Mean value: $ \overline{T} = 305.94$ K $= 32.79$ °C
+\end{frame}
+
+\begin{frame}{Heat flux meter}
+    \begin{figure}
+    \centering
+    \vspace*{-18pt}
+    \includegraphics[scale=0.31]{img/ch3/QIRT2015Aisa_Fig8.png}
+    \end{figure}
+    \pause
+    Mean value after 10 hours (steady condition): $q_{ref}=11.460\; W/m^2$
+\end{frame}
+
+\begin{frame}{Heat flux panorama}
+    \begin{figure}
+        \hspace*{-15pt}
+        \includegraphics[scale=0.222]{img/ch3/Pano_Q_Final.jpg}
+    \end{figure}
+    \centering
+    Mean value: $\bar{q}=11.724\; W/m^2$
+\end{frame}
+
+
+\begin{frame}{Results \& discussion}
+ Therefore, the final K-value from IR thermography is:
+
+    \begin{equation*}
+    K_{th}=\frac{\bar{q}}{\Delta ̅\theta} =\frac{11.724\; W/m^2}{(32.79-7.5)\;K}=0.464\; W/K\cdot m^2 
+    \end{equation*}
+
+\pause
+Comparing with ATP standard:
+    \begin{table}[ht]
+        \centering
+        \caption{ATP test results.}
+        \begin{tabular}{l|r}
+            \hline
+            Fans Power [W] (Mean over 6 hours) & 144 \\
+            \hline 
+            Heaters Power [W] (Mean over 6 hours) &   988\\
+            \hline
+            Internal temperature [°C] (Mean over 6 hours) &   32.5\\
+            \hline
+            External temperature [°C] (Mean over 6 hours) &   7.5\\
+            \hline
+            K-Value [ W/(K m$^2 $)] & 0.46 \\
+            \hline
+        \end{tabular}
+        % \label{ATP_res}
+    \end{table}
+\pause
+The error between these two results is then:
+
+    \begin{equation*}
+        e=  \frac{|K_{th}-K|}{K}=\frac{0.464-0.46}{0.46}=0.0087=0.87\%
+    \end{equation*}
+\end{frame}
+
+\begin{frame}{Results \& discussion}
+    \begin{itemize}[<+->]
+    \pause
+    \large
+        \item Thermal resistance model works well
+        \item Favorable final result
+        \item Uniform and repeatable texture inside the truck toughened the automatic feature detection and image stitching
+        \item Amelioration in need for image processing with advanced feature detection and description
+    \end{itemize}
 \end{frame}
