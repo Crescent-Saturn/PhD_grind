@@ -2,3 +2,68 @@
 \subsection{Panoramic view of the heat flux inside the vehicle}
 \frame{\tableofcontents[currentsection,currentsubsection]}
 
+\begin{frame}{Outline}
+ As a truck is normally huge, the homography transformation would then have a large deviation in the final thermal images.\\
+ \pause
+ ==> Take photo inside of the truck ?\\
+ \pause
+ ==> \alert{Panoramic view!}
+\end{frame}
+
+
+\begin{frame}{Experimental Set-up}
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.3]{img/ch3/Camera_setup.jpg}
+        \caption{Pan-tilt device for experiment test}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Image processing--spherical projection}
+    \begin{figure}
+        % \centering
+        \hspace*{-15pt}
+        \includegraphics[scale=0.238]{img/ch3/Sph_1.jpg}
+        \includegraphics[scale=0.238]{img/ch3/Sph_2.jpg}
+        \caption{Spherical projection.}
+        \label{Sph_pro}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Image processing--spherical projection}
+Therefore, given the focal length $ f $ and the image coordinates $ (x, y) $, the corresponding spherical coordinates $ (x', y') $ are:
+
+    \begin{align*}
+        x'={} f \cdot tan(\dfrac{x-x_c}{f})+x_c \notag \\
+        y'=f \cdot \frac{tan(\dfrac{y-y_c}{f})}{cos(\dfrac{x-x_c}{f})} +y_c
+    \end{align*}
+where $ (x_c,y_c) $ are the center coordinates of the spherical image.
+
+\end{frame}
+
+
+\begin{frame}{Image processing--spherical projection}
+The original image and its spherical projection are then:
+    \begin{figure}
+        % \centering
+        \hspace*{-15pt}
+        \includegraphics[scale=0.336]{img/ch3/img7.jpg}
+        \includegraphics[scale=0.336]{img/ch3/sph_img7.jpg}
+        \caption{Original IR image (left) and its spherical projection (right).}
+        \label{Orig_sph}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Image projection--Harris corner}
+    \begin{figure}
+        %   \centering
+        \hspace*{-15pt}
+        \includegraphics[scale=0.50]{img/ch3/Harris1.png}
+        \includegraphics[scale=0.50]{img/ch3/Harris2.png}
+        \caption{Harris corners detected (green crosses) in the figure above and its precedent image of the whole series. }
+        % \label{Harris}
+    \end{figure}
+    % In these two continuous images, the IR camera scanned from top to bottom inside the vehicle and there is a ``clear" (from our vision) overlapping part (left bottom part in the first and left top part in the second) in these two images. However, from the Harris corners detection results, all the features obtained could not be matched correctly.
+\end{frame}
