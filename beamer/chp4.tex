@@ -3,9 +3,15 @@
 \frame{\tableofcontents[currentsection,currentsubsection]}
 
 \begin{frame}{Outline}
-    ATP standard tests: \textbf{Global} results
-
+    ATP standard tests: \textbf{Global} results\\
     \textbf{Local} defects ==> \alert{Infrared Thermography}
+
+    Time consuming!\\
+    In summer, not practical, nor convenient.
+
+    ATP standard method uses heating inside and cooling outside.\\
+    Can we just cool the outside to see the difference?\\
+    ==> Using {\color{cyan}{compressed air}} instead of \alert{radiator!}
 \end{frame}
 
 
@@ -35,7 +41,7 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{SImulation models}
+\begin{frame}{Simulation models}
  The governing pure conduction equation:
     \begin{equation*}
         \rho C_p \frac{\partial T}{\partial t}-\nabla \cdot (k\nabla T) = 0
@@ -108,8 +114,7 @@ Computational results:
 \end{frame}
 
 
-\begin{frame}{Results comparison}
-Computational results:
+\begin{frame}{Quantitative comparison}
 
     \begin{figure}
         \hspace*{-20pt}
@@ -129,18 +134,17 @@ Computational results:
 
 
 \begin{frame}{Quantitative comparison}
-Computational results:
 
     \begin{figure}
         \hspace*{-20pt}
         \subfloat[{\color{red}{Exp.}} Air Cooling]
         {
-            \includegraphics[scale=0.42]{img/ch4/heating_evolution5.png}
+            \includegraphics[scale=0.42]{img/ch4/cooling_evolution4.png}
         }
         % \hspace*{8pt}
         \subfloat[{\color{cyan}{Sim.}} Air Cooling]
         {
-            \includegraphics[scale=0.37]{img/ch4/Truck_panel_Flash_TGraph_4.png}
+            \includegraphics[scale=0.37]{img/ch4/Truck_panel_laminar_TGraph_4.png}
         }
         \caption{Quantitative results}
 
