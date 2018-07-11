@@ -2,3 +2,190 @@
 \subsection{Mapping of the heat flux of an insulated small container by infrared thermography}
 \frame{\tableofcontents[currentsection,currentsubsection]}
 
+\begin{frame}{ATP test}
+    the overall coefficient of heat transfer ($K$) is defined as:
+    \begin{equation*}
+        K = \frac{W}{S\cdot \Delta \theta}
+    \end{equation*}
+    $W$: Power \\
+    $\Delta \theta$: a  steady  temperature  difference\\
+    $S$ is the mean surface of the equipment:
+    \begin{equation*}
+        S = \sqrt{S_i \cdot S_e}
+    \end{equation*}
+\end{frame}
+
+
+\begin{frame}{Theory \& Methods}
+    Symbolically Ohm’s law:
+    \begin{equation*}
+        I = \frac{\Delta V}{R_e}
+    \end{equation*}
+    \pause
+    Analogy to an electrical circuit, Fourier’s law can be written similarly as
+    \begin{equation*}
+        q = \frac{\Delta T}{R_t}
+    \end{equation*}
+
+    \pause
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.55]{img/ch2/Therm_Res.png}
+        % \caption{Overall thermal resistance of the roll-container}
+        % \label{Therm_Res}
+    \end{figure}
+
+    \centering
+    \begin{minipage}[c]{0.8\textwidth}
+        $\theta_i$: inside temperature,  $\theta_{wi}$: internal wall temperature\\
+        $\theta_e$: outside temperature, $\theta_{we}$: external wall temperature
+    \end{minipage}
+
+\end{frame}
+
+
+\begin{frame}{Theory \& Methods}
+    Heat flux computation:\\ 
+    by a thermal flux meter in a reference zone:
+    \begin{equation*}
+        q_{ref} = \frac{\theta_{we}(x_r,y_r)-\theta_e}{1/h_e}
+    \end{equation*}
+    which gives that:
+    \begin{equation*}
+        h_e = \frac{q_{ref}}{\theta_{we}(x_r,y_r)-\theta_e}
+    \end{equation*}
+    then:
+    \begin{equation*}
+        q(x,y) = \frac{q_{ref}}{\theta_{we}(x_r,y_r)-\theta_e}(\theta_{we}(x,y)-\theta_e)
+    \end{equation*}
+    Where $\theta_{we}(x,y)$ is the temperature at each point of the external surface.    
+\end{frame}
+
+
+\begin{frame}{Experimental Setup}
+Roll-container:
+    \begin{figure}[!htbp]
+        \centering
+        \includegraphics[scale=0.08]{img/ch2/DSC_0191.jpg}
+        \includegraphics[scale=0.08]{img/ch2/DSC_0189.jpg}
+        \caption{The roll container used for the test [outside and inside]}
+        % \label{box}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Results}
+Values from heat flux meter:
+    \begin{figure}
+        % \centering
+        \hspace*{-18pt}
+        \includegraphics[scale=0.275]{img/ch2/It_project_2014_QProfile.png}
+        \includegraphics[scale=0.275]{img/ch2/It_project_2014_TProfile.png}
+        % \caption{Data from thermal flux meter (heat flux and temperature profiles)}
+        % \label{flux_meter}
+    \end{figure}
+    \centering
+    \small{Mean values (steady condition) are $q_r=9.73\; W/(m^2 K)$ and $T_r = 7.83\; ^\circ$C.}
+\end{frame}
+
+
+\begin{frame}{Results--\small{Thermal raw images}}
+    \begin{figure}
+        \vspace*{-5pt}
+        \centering
+        \includegraphics[scale=0.25]{img/ch2/IR_front_m.jpg}
+        \hspace{5pt}
+        \includegraphics[scale=0.25]{img/ch2/IR_back_m.jpg}
+        \includegraphics[scale=0.25]{img/ch2/IR_left_m.jpg}
+        \hspace{5pt}
+        \includegraphics[scale=0.25]{img/ch2/IR_right_m.jpg}
+        \includegraphics[scale=0.25]{img/ch2/IR_top.jpg}
+        \vspace*{-5pt}
+        \caption{\footnotesize{The temperature map of the roll container (front, rear, left, right and top surfaces)}}
+        % \label{Q_box}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Results--\small{Image correction}}
+    Several image geometrical corrections exit, while an easier way to realize is to apply the \alert{homography} technique from computer vision.\\
+    \pause
+    Briefly, the planar homography relates the transformation between two planes (up to a scale factor):
+    \begin{equation*}
+        s\begin{bmatrix}
+        x'\\y'\\1
+        \end{bmatrix}
+        =H \begin{bmatrix}
+        x\\y\\1
+        \end{bmatrix}
+        = \begin{bmatrix}
+        h_{11} & h_{12} & h_{13}\\h_{21} & h_{22} & h_{23}\\h_{31} & h_{32} & h_{33}
+        \end{bmatrix}
+        \begin{bmatrix}
+        x\\y\\1
+        \end{bmatrix}
+    \end{equation*}
+It is generally normalized with $h_{33}=1$
+\end{frame}
+
+\begin{frame}{Results--\small{Homography}}
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.45]{img/ch2/homography_perspective_correction.jpg}
+    \end{figure}
+    \pause
+    In our case, the ratio between the length and the width of the roll container is known. Once the projective transformation matrix in images has been obtained, a bilinear interpolation with the projective transformation matrix into the raw images will be performed.
+
+    Recall: 
+        \begin{equation*}
+            q(x,y) = \frac{q_r}{\theta_{we}(x_r,y_r)-\theta_e}(\theta_{we}(x,y)-\theta_e)
+        \end{equation*}
+\end{frame}
+
+
+\begin{frame}{Results--\small{Heat flux map}}
+    \begin{figure}
+        \vspace*{-5pt}
+        \centering
+        \includegraphics[scale=0.25]{img/ch2/Q_front_m.jpg}
+        \hspace{5pt}
+        \includegraphics[scale=0.25]{img/ch2/Q_back_m.jpg}
+        \hspace*{5pt}
+        \includegraphics[scale=0.25]{img/ch2/Q_left_m.jpg}
+        \hspace{5pt}
+        \includegraphics[scale=0.25]{img/ch2/Q_right_m.jpg}
+        \includegraphics[scale=0.25]{img/ch2/Q_top.jpg}
+        \vspace*{-5pt}
+        \caption{\footnotesize{The heat flux map of the roll container (front, rear, left, right and top surfaces)}}
+        % \label{Q_box}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Results--\small{Vehicle results}}
+    \begin{figure}
+        \vspace*{-5pt}
+        \centering
+        \includegraphics[scale=0.25]{img/ch2/IR_truck_lt_m}
+        \hspace{3pt}
+        \includegraphics[scale=0.25]{img/ch2/IR_truck_rt_m}
+        % \vspace{3pt}
+        \includegraphics[scale=0.25]{img/ch2/IR_truck_bk11_m}
+        \hspace{6pt}
+        \includegraphics[scale=0.25]{img/ch2/IR_truck_bk12_m}
+        \includegraphics[scale=0.25]{img/ch2/IR_truck_tp_m}
+        \vspace*{-5pt}
+        \caption{\footnotesize{The temperature map of the refrigerated vehicle (left, right, rear1, rear2 and top surfaces)}}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Discussion}
+    \begin{itemize}[<+->]
+    \pause
+    \large
+        \item Thermal resistance model works well
+        \item Homography application offers good results in roll-container
+        \item Large size of vehicle panel 
+        \item Thermal reflection in vehicle results
+    \end{itemize}
+\end{frame}
