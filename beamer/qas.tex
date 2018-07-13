@@ -1,5 +1,37 @@
 %!TEX root = soutenance_lei_2018.tex
-\begin{frame}{Chapter 4 --\small{Specimen dimensions}}
+\begin{frame}{Q \& A--Chpt 1 \small{Bottom surface}}
+    \begin{figure}
+    \includegraphics[scale=0.06]{img/qas/DC_51949.jpg}
+    \includegraphics[scale=0.06]{img/qas/DC_51951.jpg}\\
+    \includegraphics[scale=0.2]{img/qas/IR_51948.jpg}
+    \includegraphics[scale=0.2]{img/qas/IR_51950.jpg}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}{Q \& A--Chpt 1}
+    \begin{figure}
+    \includegraphics[scale=0.095]{img/qas/DC_51957.jpg}
+    \includegraphics[scale=0.3]{img/qas/IR_51956.jpg}
+
+    \end{figure}
+
+\end{frame}
+
+
+\begin{frame}{Q \& A--Chpt 1 \small{Results comparison}}
+Global K-value for roll-container:  $0.53\; W/(m^2 K)$\\
+Temperature  difference: $\Delta \theta = 25.3 \;$ °C\\
+\bigskip
+Average value of heat flux from thermography: $q_{ir} = 10.7\; W/m^2$\\
+which gives:
+$K_{ir} = q_{ir}/\Delta \theta = 0.42\; W/(m^2 K)$
+
+\bigskip
+The influence of the convective heat transfer around the roll-container surfaces is more important than imaging.
+\end{frame}
+
+\begin{frame}{Q \& A--Chpt 4 \small{Specimen}}
     \begin{table}
     \centering
 
@@ -20,36 +52,35 @@
 
 
 
-% \begin{frame}{Chapter 4 --\small{Materials properties}}
-%  \begin{table}[ht]
-%     \centering
-%     \scriptsize
-%   \caption{Materials properties.}
-% % \tbl{Materials properties.}
-%  {
-%  \begin{tabular}{p{1.5cm}|p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}
-%   \hline
-%         & Density $\rho [Kg/m^3] $
-%         & Thermal conductivity  $k [W/(m\cdot K)] $
-%           & Heat Capacity $C_p [J/(Kg\cdot K)]$
-%           & Surface Emissivity $\epsilon$
-%           & Dynamic viscosity $\mu [10^{-5}kg/m\cdot s]$ 
-%           & Ratio of specific heat $\gamma$   \\
-%    \hline
-%    Aluminum (plaques and thermal bridge)  &2700 &238  &900 &0.77 & & \\
-%    Foam &24 &0.03 &1300 & & & \\
-%    Air  &1.2 &0.024 &1.005 & &1.846 &1.4 \\
-%    Sawdust  &192  &0.08 &900 & & & \\
-%    Water &1000  &0.58 &4.18 & & &1.33 \\
-%    Steel &7850  &44.5 &475 & & & \\
-%    Lamps &8700  &400  &10 &0.99 & & \\
-%    \hline
-%  \end{tabular}
-%  }
-% \end{frame}
+\begin{frame}{Q \& A--Chpt 4 \small{Materials properties}}
+    \begin{figure}[ht]
+      \centering
+      \includegraphics[scale=0.45]{img/qas/table_mat.png}
+    \end{figure}
+
+\end{frame}
 
 
-\begin{frame}{Chapter 5--\small{Thermal raw images:}}
+
+\begin{frame}{Q \& A--Chpt 4 }
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.5]{img/qas/Laminar_model_full.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Q \& A--Chpt 5 \small{Exp Set-up}}
+    Equipments' detail:
+    \begin{itemize}
+        \item Infrared Camera FLIR SC3000 (spatial resolution equal to 320$\times$240 pixels, frame rate up to 50Hz, GaAs sensor, spectral range 8-9 $\mu m$)
+        \item Two pairs of flash lamps for a total of 10 kJ (electric) released in 5 $ms $ 
+        \item One pair of modulated halogen lamps with 1kW each served as Lock-in    stimulation   
+        \item An isolated bottle (500 ml) filled with  Liquid Nitrogen.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Q \& A--Chpt 5 \small{raw images:}}
     % \small{Thermal raw images:}
     \begin{figure}
      % \centering
@@ -72,4 +103,28 @@
        }
        \caption{Thermal raw images of PT and LN$_2$ stimulation techniques}      
     \end{figure}
+\end{frame}
+
+
+\begin{frame}{Q \& A--Chpt 5 \small{ROC computation}}
+The main algorithm in the calculation of TPR and FPR is clarified as:
+\begin{enumerate}
+   \item Choose the post-processed thermogram in which most defects shown as the test image;
+%    \replaced [id=LL] {Choose the post-processed thermogram in which most defects shown as the test image;}{Identify the best gray-scale result from the post-processing thermal images as the test image;}
+   \item Resize the defect map to the same size as that of the test image;
+   \item Choose a thresholding step number $N$($N=1000$ in this study) and establish the step value of thresholding [from $0$, $\frac{1}{N}$, $\frac{2}{N}$ till $1 (=\frac{N}{N})$];
+   \item For each thresholding step, binarize the test image with the thresholding and then compare it to the defect map, in order to obtain the corresponding TPR and FPR values;
+   \item Iterate the binarization and comparison so as to plot a whole curve.
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Q \& A}
+CFRP (25 defects inside):\\
+heating one side with lamp and cooling the other side with liquid nitrogen 
+  \begin{figure}
+    \centering
+    \includegraphics[scale=0.15]{img/qas/ref_noisy.jpg}
+  \end{figure}
+
 \end{frame}
