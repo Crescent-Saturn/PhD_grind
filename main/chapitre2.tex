@@ -1,3 +1,4 @@
+%!TEX root = gabarit-doctorat.tex
 \part{Maintain the ``cold chain"}     % numéroté
 %\phantomsection\addcontentsline{toc}{part}{Maintain the ``cold chain"} % inclure dans TdM
 The following two chapters will present two published paper concerning the application of infrared thermography for Non-Destructive Testing \& Evaluation applied in ``Maintain the cold chain" procedure.
@@ -9,11 +10,11 @@ In the second research, a panoramic view of the heat flux on the internal surfac
 \chapter{Mapping of the heat flux of an insulated small container by infrared thermography}
 The results of this study were presented at an oral session of the 24th IIR International Congress of Refrigeration 2015 Yokohama, Japan.
 
-\section*{Résumé}
+\section{Résumé}
 Cette étude portait principalement sur la cartographie du flux de chaleur sur la surface externe d'un conteneur-roulable isolé par thermographie infrarouge.
 La mesure standard ATP a été réalisée pour obtenir les résultats expérimentaux, tandis que des images IR du conteneur-roulable ont été prises lorsque la condition stable a été atteinte, afin d'analyser et de calculer le flux de chaleur correspondant sur des surfaces entières. Un modèle simple de résistance thermique a été appliqué pour réaliser le calcul. Les chiffres de température finaux ont montré une bonne distribution uniforme, et plusieurs défauts dans la structure comme des ponts thermiques ou des fuites d'air ont été identifiés. Une zone de référence de la paroi externe est mesurée par un fluxmètre thermique, puis avec cette référence, la carte de flux de chaleur à la surface totale a été déterminée. Par ailleurs, pour une meilleure vision de la carte de flux thermique, la technique d'homographie a été réalisée sur les images brutes en appliquant une interpolation bilinéaire à la matrice de transformation projective. La carte de flux de chaleur corrigée finale a été démontrée pour chaque surface, dans laquelle la droite a montré une valeur plus petite que les autres.
 
-\section*{Abstract}
+\section{Abstract}
 This work mainly focused on mapping the heat flux on the external surface of an insulated roll-container by infrared thermography technique. The ATP standard measurement was performed to obtain the experimental results, meanwhile IR images of roll-container have been taken when the steady condition arrived, in order to analyze and compute the corresponding heat flux on entire surfaces. A simple thermal resistance model has been applied to realize the computation. Final temperature figures showed a good uniform distribution, and several defects in the structure like thermal bridges or air leakages have been identified. A reference zone of the external wall is measured by a thermal flux meter, then with that reference the whole surface heat flux map have been figured out. Besides, for a better view of the heat flux map, the homography technique has been performed into the raw images by applying a bilinear interpolation with the projective transformation matrix. The final corrected heat flux map has been demonstrated for each surface, in which the right one showed a smaller value than the others.
 
 
@@ -241,7 +242,7 @@ Moreover, for a better view, some techniques are often applied for images correc
 \subsection{Homography application}
 In practical applications, such as image rectification, image registration, or computation of camera motion—rotation and translation—between two images, a homography is often performed in the field of computer vision (\citet{homo_wiki}).
 
-In this work, as one knows the radio between the length and the width of the roll container (or between the width and the height in same way), a projective transformation matrix in images has been obtained. Then applying a bilinear interpolation with the projective transformation matrix, into the raw images, one finally got the corrected heat flux mapping of each surfaces, demonstrated in Fig \ref{Q_box}.
+In this work, as one knows the ratio between the length and the width of the roll container (or between the width and the height in same way), a projective transformation matrix in images has been obtained. Then applying a bilinear interpolation with the projective transformation matrix, into the raw images, one finally got the corrected heat flux mapping of each surfaces, demonstrated in Fig \ref{Q_box}.
 \begin{figure}[!htbp]
 	%	\hspace{-10mm}
 	\centering

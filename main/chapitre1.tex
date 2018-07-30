@@ -1,3 +1,4 @@
+%!TEX root = gabarit-doctorat.tex
 \chapter{State of the art}     % numéroté
 \section*{Maintain the ``cold chain"}
 \phantomsection\addcontentsline{toc}{section}{Maintain the ``cold chain"}
@@ -5,7 +6,7 @@
 \section{ATP background}
 As one major procedure of the cold chain concept, the correct transport of perishable foodstuffs in refrigerated vehicles is a critical link in the food chain not only in terms of maintaining the temperature integrity of the transported products but also its impact on energy consumption and CO$_2$ emissions. Referring this, the  commercial food sector, including agriculture, food manufacture transport and retail are responsible for the total greenhouse gas emissions in whole world.
 
-According to a report (\citet{watkiss2005validity}), food manufacture distribution estimated to be responsible for 1.8\% of the total emission. Due to a variety of operating conditions and constraints, transport refrigeration equipment operation needs more rigorous environment, such as suitable temperature controlled handling and storage facilities that can maintain food at appropriate temperatures and enable these temperatures to be monitored controlled and recorded. There are also specific temperature requirements for certain categories of food, one example is given in Fig.~\ref{tem_reqs}. %(\citet{tem_reqs}.
+According to a report (\citet{watkiss2005validity}), food manufacture distribution estimated to be responsible for 1.8\% of the total emission. Due to a variety of operating conditions and constraints, transport refrigeration equipment operation needs more rigorous environment, such as suitable temperature controlled handling and storage facilities that can maintain food at appropriate temperatures and enable these temperatures to be monitored controlled and recorded. There are also specific temperature requirements for certain categories of food, one example is given in Fig.~\ref{tem_reqs}. (\citet{tassou2009food}.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.9]{art/temp_reqs}
@@ -192,6 +193,9 @@ In addition, after comparing  the radiative-heat injection and convection-heat r
 
 Other applications have then been made during the past decades in several domains. (\citet{Swiatczak2008Evaluation}) evaluates convection cooling conditions of electronic devices by thermal wave method using Fourier and wavelet analysis in lock-in thermography. One study of applying cold excitation in thermal tomography can be found in (\citet{Bajorek2010Analysis}), where a stream of carbon dioxide of different duration as the cooling excitation was applied by a cryogenic instrument. possibilities of reconstruction object parameters were analyzed in their results. The quality of the results (not only the defects locations, but also their depth) would be improved with increasing cold excitation duration.
 
+Another interesting work also applied the cold excitation can be found in (\citet{Ibarra-Castanedo2010Diagnostics}), where a comparison between holographic interferometry (both double exposure and real time), and pulsed thermography (PT) processing techniques with differential absolute contrast (DAC) and pulsed phase thermography (PPT) for the detection of the subsurface flaws on wooden panel paintings has been performed.
+
+
 (\citet{endohdynamical2012}) proposed constructing an active thermographic imaging system, in which a cooling material contacts the surface and scans over a welded zone of two stainless plates (Fig \ref{endoh_fig}).
 \begin{figure}[!htbp]
 	\centering
@@ -216,7 +220,7 @@ They recorded both a time-varying thermographic image and a real-time response o
 
 In both two cases of scanning (v= 10 and v=50 $mm/s$), it is observed that the locally high-temperature appears in low-temperature region of the simulated welding region. For axial movement of coolant material, the heat inside and the surface of the specimen transfers toward the interface surface of the specimen to the coolant, due to conservation of the axial symmetry of heat transfer. However, for lateral movement of coolant, it was squeezed for the spatial distribution of the temperature along the direction of coolant movement. Therefore, an elliptical shape of temperature distribution was obtained.
 
-In (\citet{Gradeck2012Solution}),  a jet cooling experiment is used to study a two-dimensional inverse heat conduction problem. To estimate a transient cooling flux, a nickel disk is heated up to 600 °C then cooled by a water jet squirting on its front side and a infrared camera captures its rear side temperature. Thermograms of cooling procedure can be found in Fig \ref{Gradeck2012Solution_1}.
+In (\citet{Gradeck2012Solution}),  a jet cooling experiment is used to study a two-dimensional inverse heat conduction problem. To estimate a transient cooling flux, a nickel disk is heated up to 600 °C then cooled by a water jet squirting on its front side and an infrared camera captures its rear side temperature. Thermograms of cooling procedure can be found in Fig \ref{Gradeck2012Solution_1}.
 \begin{figure}
 	%\hspace{-45pt}
 	\centering
@@ -239,7 +243,6 @@ In (\citet{2012-LewisHom}) a custom, microfluidic  heat  sink  with  an  IR-tran
 \end{figure}
 The experimental results (Fig \ref{cooling_res}) have shown that the technique has a potential to detect hidden flaws due to the influence of the physical differences between the defect and the non-defect area in the cooling parameters. But the results depended on the depth of defect: ``Greater depths require larger heating and greater ranges of precision in thermographic data acquisitions".
 
- 
 %Still, the limitation of that proposed method in this literature is only by natural convection. %Our work will apply the forced convection by spraying the nitrogen gas.
 %\newpage
 %\input{main/issue}
@@ -361,7 +364,7 @@ C_{ac}(t) = & [T_{def}(t) -T_0] - [T_s(t) - T_0] \\
 \end{align}
 DAC Applications on different type of material samples can be found in (\citet{pilla2002new}), which has proven this method has an effective improvement on the signal to noise ratio.
 
-\subsection{Temperature Signal Reconstruction (TSR)}
+\subsection{Thermographic Signal Reconstruction (TSR)}
 The thermographic signal reconstruction (TSR) data processing technique is one of the most recent improvements which raise thermography to the level of the most established NDE techniques (\citet{shepard2003reconstruction, Balageas2015}).
 
 Same as DAC method, Eq. \ref{PT_eq_2} can be rewritten  in logarithmic way as:
@@ -409,7 +412,7 @@ The entire results obtained in this thesis are mostly post-processed by PCT meth
 The Receiver operating characteristic (ROC) curve is a technique in statistics which helps visualize, organize and select classifiers based on their performance. ROC graphs have long been used in different fields as signal detection (\citet{swets2000better}), diagnostic systems(\citet{swets1988measuring}), medical decision(\citet{zou2002receiver}), and the earliest one in machine learning(\citet{spackman1989signal}). While being frequently chosen a standard method in several scientific fields, ROC are rarely applied in the thermographic field.(\citet{Bison2014a}).
 
 \subsubsection{ROC concept}
-Basically, a classification model (classifier or diagnosis) is a mapping of instances between certain classes/groups. For a two-class prediction problem (also known as binary classification), in which the results are marked either as positive ($p$) or negative ($n$). Then there are four results in a binary classification. Therefore, given an instance, it the instance is positive and it is classified as positive, it is called as a \textit{true positive}; if it is classified as negative, it is called as a \textit{false negative}. If the instance is negative and it is classified as negative, it is called as a \textit{true negative}; if it is classified as positive, it is called as a \textit{false positive}. When given a set of instances, a two-by-two confusion matrix (also called a contingency table) can be constructed representing the dispositions of the set of instances. 
+Basically, a classification model (classifier or diagnosis) is a mapping of instances between certain classes/groups. For a two-class prediction problem (also known as binary classification), in which the results are marked either as positive ($p$) or negative ($n$). Then there are four results in a binary classification. Therefore, given an instance, if the instance is positive and it is classified as positive, it is called as a \textit{true positive}; if it is classified as negative, it is called as a \textit{false negative}. If the instance is negative and it is classified as negative, it is called as a \textit{true negative}; if it is classified as positive, it is called as a \textit{false positive}. When given a set of instances, a two-by-two confusion matrix (also called a contingency table) can be constructed representing the dispositions of the set of instances. 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=1.2]{art/ROCintro_1}

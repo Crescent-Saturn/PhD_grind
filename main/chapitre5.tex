@@ -4,13 +4,13 @@ Then it was accepted for publication in Proceedings Volume 10214, Thermosense: T
 
 
 %
-\section*{Résumé}
-La thermographie pulsée (PT) est l'une des méthodes les plus courantes dans les procédures de thermographie active de la thermographie pour NDT \& E ​​(essais non destructifs  \& évaluation), en raison de la rapidité et la commodité de cette technique d'inspection. Des éclairs ou des lampes sont souvent utilisés pour chauffer les échantillons dans la PT traditionnelle. Cet article explore principalement exactement la stimulation externe opposée en IR Thermographie: refroidissement au lieu de chauffage. Un échantillon d'acier avec des trous à fond plat de différentes profondeurs et tailles a été testé. De l'azote liquide (LN $_2$) est répandu sur la surface de l'échantillon et l'ensemble du processus est capturé par une caméra thermique. Pour obtenir une bonne comparaison, deux autres techniques classiques de CND, la thermographie pulsée et la thermographie verrouillée, sont également utilisées. En particulier, la méthode Lock-in est implémentée avec trois fréquences différentes. Dans la procédure de traitement d'image, la méthode de thermographie en composantes principales (PCT) a été effectuée sur toutes les images thermiques. Pour les résultats Lock-in, les images de phase et d'amplitude sont générées par la transformée de Fourier rapide (FFT). Les résultats montrent que toutes les techniques présentaient en partie les défauts tandis que la technique LN $_2$ affichait les défauts seulement au début du test. De plus, un poste-traitement de seuil binaire est appliqué aux images thermiques, et en comparant ces images à une carte binaire de l'emplacement des défauts, les courbes caractéristiques de fonctionnement du récepteur (ROC) correspondantes sont établies et discutées. Une comparaison des résultats indique que la meilleure courbe ROC est obtenue en utilisant la technique flash avec la méthode de traitement PCT.
+\section{Résumé}
+La thermographie pulsée (PT) est l'une des méthodes les plus courantes dans les procédures de thermographie active de la thermographie pour NDT \& E ​​(essais non destructifs  \& évaluation), en raison de la rapidité et la commodité de cette technique d'inspection. Des éclairs ou des lampes sont souvent utilisés pour chauffer les échantillons dans la PT traditionnelle. Cet article explore principalement exactement la stimulation externe opposée en IR Thermographie: refroidissement au lieu de chauffage. Un échantillon d'acier avec des trous à fond plat de différentes profondeurs et tailles a été testé. De l'azote liquide (LN$_2$) est répandu sur la surface de l'échantillon et l'ensemble du processus est capturé par une caméra thermique. Pour obtenir une bonne comparaison, deux autres techniques classiques de CND, la thermographie pulsée et la thermographie verrouillée, sont également utilisées. En particulier, la méthode Lock-in est implémentée avec trois fréquences différentes. Dans la procédure de traitement d'image, la méthode de thermographie en composantes principales (PCT) a été effectuée sur toutes les images thermiques. Pour les résultats Lock-in, les images de phase et d'amplitude sont générées par la transformée de Fourier rapide (FFT). Les résultats montrent que toutes les techniques présentaient en partie les défauts tandis que la technique LN $_2$ affichait les défauts seulement au début du test. De plus, un poste-traitement de seuil binaire est appliqué aux images thermiques, et en comparant ces images à une carte binaire de l'emplacement des défauts, les courbes caractéristiques de fonctionnement du récepteur (ROC) correspondantes sont établies et discutées. Une comparaison des résultats indique que la meilleure courbe ROC est obtenue en utilisant la technique flash avec la méthode de traitement PCT.
 
 %Cette recherche étudie une stimulation externe - refroidissement au lieu de chauffer en thermographie infrarouge pour NDT \& E. Un spécimen en acier est utilisé afin de  tester trois stimulations différentes sur les images thermiques et également une comparaison d'analyse ROC. Les résultats montrent que toutes les techniques mettent en évidence une partie des défauts de l'échantillon, alors que la technique LN $ _2 $ ne représente les défauts qu'au début; ceci peut être dû à la conductivité élevée de l'acier. Dans les résultats thermiques, la méthode de post-traitement PCT affiche de meilleurs résultats pour toutes les procédures. Plus de défauts sont exposés dans la stimulation Flash avec le traitement PCT.
 % Les résultats de cette étude ont d'abord été présentés lors d'une session orale de SPIE Thermosense: Thermal Infrared Applications XXXIX 2017, aux Etats-Unis.
 
-\section*{Abstract}
+\section{Abstract}
 Pulsed Thermography (PT) is one of the most common methods in Active Thermography procedures of the Thermography for NDT \& E (Nondestructive Testing \& Evaluation), due to the rapidity and convenience of this inspection technique. Flashes or lamps are often used to heat the samples in the traditional PT. This paper mainly explores exactly the opposite external stimulation in IR Thermography: cooling instead of heating. A steel sample with flat-bottom holes of different depths and sizes has been tested. Liquid nitrogen (LN$_2$) is sprinkled on the surface of the specimen and the whole process is captured by a thermal camera. To obtain a good comparison, two other classic NDT techniques, Pulsed Thermography and Lock-In Thermography, are also employed. In particular, the  Lock-in  method  is  implemented  with  three  different  frequencies.  In  the  image  processing  procedure,  the Principal Component Thermography (PCT) method has been performed on all thermal images. For Lock-In results, both Phase and Amplitude images are generated by Fast Fourier Transform (FFT). Results show that all techniques presented part of the defects while the LN$_2$ technique displays the flaws only at the beginning of the test. Moreover, a binary threshold post-processing is applied to the thermal images, and by comparing these images to a binary map of the location of the defects, the corresponding Receiver Operating Characteristic (ROC) curves are established and discussed. A comparison of the results indicates that the better ROC curve is obtained using the Flash technique with PCT processing method.  
 
 \newpage
@@ -41,22 +41,25 @@ Pulsed Thermography (PT) is one of the most common methods in Active Thermograph
 \newpage
 \section{Introduction}
 \label{sect:intro}  % \label{} allows reference to this section
-In the Nondestructive Testing \& Evaluation (NDT \& E) field, active InfraRed (IR) thermography \citet{Maldague2001theory} is a technique widely used in assessing the conditions of parts of material components, with an extremely broad range of applications \citet{Vavilov2017Thermal,cadelano2016}. Traditionally, Pulsed Thermography (PT) deploys a thermal stimulation pulse (flash or lamp heating) to produce a thermal contrast between the feature of interest and the background, then monitors the time evolution of the surface temperature by a thermal camera. With this rapidity and convenience, numerous studies have been devoted to this technique, that is now a standard procedure for thermal testing.\citet{Maldague1993Nondestructive,Maldague1994bInfra,2007-Ibarra-Castanedo,2011-ClementeIbarra-Castanedo,duan2013quantitative,vavilov_2015}. 
+In the Nondestructive Testing \& Evaluation (NDT \& E) field, active InfraRed (IR) thermography (\citet{Maldague2001theory}) is a technique widely used in assessing the conditions of parts of material components, with an extremely broad range of applications (\citet{Vavilov2017Thermal, Cadelano2016Corrosion}). Traditionally, Pulsed Thermography (PT) deploys a thermal stimulation pulse (flash or lamp heating) to produce a thermal contrast between the feature of interest and the background, then monitors the time evolution of the surface temperature by a thermal camera. With this rapidity and convenience, numerous studies have been devoted to this technique, that is now a standard procedure for thermal testing (\citet{Maldague1993Nondestructive,Maldague1994bInfra,2007-Ibarra-Castanedo,2011-ClementeIbarra-Castanedo,duan2013quantitative,Vavilov2015Review}). 
 %\added [id=GF] {that is now a standard procedure for thermal testing.}
 
 However, if the temperature of the material to inspect is already higher than the ambient temperature, it can be of interest to make use of a cold thermal source such as a line of air jets (or water jets; sudden contact with ice, snow, etc.). In fact, a thermal front propagates the same way whether being hot or cold: what is important is the temperature differential between the thermal source and the specimen. An advantage of a cold thermal source is that it does not induce spurious thermal reflections into the IR camera as in the case of a hot thermal source. The main limitations of cold stimulation sources are related to practical considerations, as it is generally easier and more efficient to heat rather then to cool a part.
 % \replaced [id=GF] {, as it is generally easier and more efficient to heat rather then to cool a part.} {as for instance it is generally easier and more efficient, to heat rather then to cool a part.} 
-Thus, the advantage and convenience of using the cold stimulation in active infrared thermography  still remains to be investigated in detail and better understood. Using a cold source could extend the range of application of infrared thermography to cases where the specimen under analysis could not be heated, due to safety issues or physical reasons\citet{Livingston2018High}. A cold source could be required while handling biological or organic materials   that could not withstand a temperature increase, such as food. Another field of investigation is the survey of concrete and composite materials in order to find cracks and delaminations due to the presence of water or ice. Also in this case, a cold source would significantly decrease the risk of altering the physical characteristics of the specimen. 
+Thus, the advantage and convenience of using the cold stimulation in active infrared thermography  still remains to be investigated in detail and better understood. 
+
+Using a cold source could extend the range of application of infrared thermography to cases where the specimen under analysis could not be heated, due to safety issues or physical reasons~(\citet{Livingston2018High}). A cold source could be required while handling biological or organic materials   that could not withstand a temperature increase, such as food. Another field of investigation is the survey of concrete and composite materials in order to find cracks and delaminations due to the presence of water or ice. Also in this case, a cold source would significantly decrease the risk of altering the physical characteristics of the specimen. 
 % \added [id=GF] {Using a cold source could extend the range of application of infrared thermography to cases where the specimen under analysis could not be heated, due to safety issues or physical reasons. A cold source could be required while handling biological or organic materials that could not withstand a temperature increase, such as food. Another field of investigation is the survey of concrete and composite materials in order to find cracks and delaminations due to the presence of water or ice. Also in this case, a cold source would significantly decrease the risk of altering the physical characteristics of the specimen} 
-Nonetheless,in the past in the scientific community, only a limited number of studies investigating a cold approach (cooling as the external stimulation in active infrared thermography) have been performed on industrial product inspection\citet{endohdynamical2012,2012-LewisHom}. A study by Burleigh\citet{1989Burleigh} showed that the cooling method with refrigerating liquids is feasible but requires caution to ensure the safety.
-% \added [id=GF] {A study by Burleigh\citet{1989Burleigh} showed that the cooling method with refrigerating liquids is feasible but requires caution to ensure the safety.} 
-The work of (Lei et al.)\citet{lei2017detection} chose instead to use air cooling to survey refrigerated vehicles. All the available works do not give a quantitative information about the reliability of the cooling technique, especially in comparison with the traditional heating procedure.
+
+Nonetheless,in the past in the scientific community, only a limited number of studies investigating a cold approach (cooling as the external stimulation in active infrared thermography) have been performed on industrial product inspection~(\citet{endohdynamical2012,2012-LewisHom}). A study by Burleigh~(\citet{Burleigh1989Thermographic}) showed that the cooling method with refrigerating liquids is feasible but requires caution to ensure the safety.
+% \added [id=GF] {A study by Burleigh(\citet{1989Burleigh} showed that the cooling method with refrigerating liquids is feasible but requires caution to ensure the safety.} 
+The work of (\citet{lei2017detection}) chose instead to use air cooling to survey refrigerated vehicles. All the available works do not give a quantitative information about the reliability of the cooling technique, especially in comparison with the traditional heating procedure.
 % \replaced [id=GF] {chose instead to use air cooling to survey refrigerated vehicles.} {demonstrates an example that air cooling approach applied in detection of the truck panel.} 
 % \added [id=GF] {All the available works do not give a quantitative information about the reliability of the cooling technique, especially in comparison with the traditional heating procedure.}
 
 Therefore, the aim of this paper is improving the current knowledge on cooling thermal stimulation
 % \replaced [id=GF] {improving the current knowledge on cooling thermal stimulation} {then the continuous investigation of cold approach} 
-in IR thermography. In order to perform a reliable comparison, three methods (two traditional techniques, Pulsed Thermography and Lock-in Thermography act as the reference) will be applied on a steel slab with different sizes of flat-bottom-holes. The thermographic images of the experiments will be  treated to  eventually produce a binary map of the location of the defects. This map will be statistically evaluated in terms of sensitivity and specificity~\citet{Fawcett2006} by comparison with the `true' map of the defects, furnishing a rank of the three stimulation methods. 
+in IR thermography. In order to perform a reliable comparison, three methods (two traditional techniques, Pulsed Thermography and Lock-in Thermography act as the reference) will be applied on a steel slab with different sizes of flat-bottom-holes. The thermographic images of the experiments will be  treated to  eventually produce a binary map of the location of the defects. This map will be statistically evaluated in terms of sensitivity and specificity~(\citet{Fawcett2006}) by comparison with the `true' map of the defects, furnishing a rank of the three stimulation methods. 
 
 \section{Experimental setup} % (fold)
 \label{sec:experimental_setup}
@@ -67,7 +70,7 @@ One side stimulation approach is often used in the Infrared Thermography NDT \& 
    % \begin{center}
    \hspace{-0.95cm}
    \begin{tabular}{c}
-   \includegraphics[scale=0.95]{chp3/Exp_setup.png}
+   \includegraphics[scale=0.95]{chp5/Exp_setup.png}
    \\
    \footnotesize{(a) Pulsed Thermography set-up} \hspace{4cm} \footnotesize{(b) Lock-in Thermography set-up}   
    \end{tabular}  
@@ -80,12 +83,12 @@ One side stimulation approach is often used in the Infrared Thermography NDT \& 
 %    \centering
 %    \subfloat[Pulsed Thermography set-up]
 %    {
-%       \includegraphics[scale=0.3]{chp3/Flash_Setup.png}
+%       \includegraphics[scale=0.3]{chp5/Flash_Setup.png}
 %    }
 %    %\hspace{5pt}
 %    \subfloat[Lock-in Thermography set-up]
 %    {
-%       \includegraphics[scale=0.3]{chp3/LIT_setup.png}
+%       \includegraphics[scale=0.3]{chp5/LIT_setup.png}
 %    }
 %    \caption{Experimental set-up in the \textit{reflection} mode}
 %    \label{Exp_setup}
@@ -112,7 +115,7 @@ In this study, a steel specimen comprising flat-bottom holes of different depths
    \begin{figure}[ht]
    \centering   
    % \begin{tabular}{c} %% tabular useful for creating an array of images 
-   \includegraphics[scale=0.4]{chp3/specimen_schema.pdf}
+   \includegraphics[scale=0.4]{chp5/specimen_schema.pdf}
    % \end{tabular}
    \caption{Steel sample dimension details with Flat-Bottom Holes of different depths and sizes (mirror image)} 
 %    \added [id=LL] {Mirror image}
@@ -149,11 +152,11 @@ In this study, 3 different frequencies of 0.0625~$Hz$ (LIT16--one period is equi
 % \end{equation}
 % where $W$ is the absorbed heating power.
 
-The Liquid Nitrogen is applied in the test by means of pouring it out directly onto the surface in order to cool the sample. LN$_2$ was sprinkled onto the specimen center and allowed to spread out forwards the edges. The whole capture duration is 500 frames with 50~$Hz$ of image frequency, ie. 10 seconds of recording. The pouring time (cooling time) is about 2 seconds, due to the bottle with a volume of 500 ml, with 100 frames in the results sequence. This way of cooling has a limit of that the central part will be first and mainly cooled, then the cold front propagates from center to the edges. This can lead to a drawback that in the final thermograms defects closer to the edges will be difficulty to detected. The experimental set-up is shown in Figure~\ref{Exp_LN2}.
+The Liquid Nitrogen is applied in the test by means of pouring it out directly onto the surface in order to cool the sample. LN$_2$ was sprinkled onto the specimen center and allowed to spread out towards the edges. The whole capture duration is 500 frames with 50~$Hz$ of image frequency, ie. 10 seconds of recording. The pouring time (cooling time) is about 2 seconds, due to the bottle with a volume of 500 ml, with 100 frames in the results sequence. This way of cooling has a limit of that the central part will be first and mainly cooled, then the cold front propagates from center to the edges. This can lead to a drawback that in the final thermograms defects closer to the edges will be difficulty to detected. The experimental set-up is shown in Figure~\ref{Exp_LN2}.
 
 \begin{figure}[ht]
    \centering
-   \includegraphics[scale=0.4]{chp3/LN2_setup.png}
+   \includegraphics[scale=0.4]{chp5/LN2_setup.png}
    \caption{Experimental set-up for LN$_2$ cooling}
    \label{Exp_LN2}
 \end{figure}
@@ -173,15 +176,15 @@ The following image-processing techniques and data-analysis methods were employe
 \end{itemize}
 
 \subsection{Principal Component Thermography (PCT)}
-The Principal Component Thermography technique\citet{Rajic2002} uses ``singular value decomposition (SVD) to reduce the matrix of observations to a highly compact statistical representation of the spatial and temporal variations relating to contrast information associated with underlying structural flaws".
+The Principal Component Thermography technique~(\citet{Rajic2002}) uses ``singular value decomposition (SVD) to reduce the matrix of observations to a highly compact statistical representation of the spatial and temporal variations relating to contrast information associated with underlying structural flaws".
 
 \subsection{FFT in Phase and Amplitude for LIT}
-In addition to the common technique for NDT \& E, Fast Fourier Transform in LIT\citet{wu1998lock} is also one of the most applied techniques in IR Thermography, which is based on the periodic heating of the object being tested. A thermal wave is likewise generated and propagates inside the material. In real experimental cases the thermal wave is composed by a principal frequency and several harmonics where the amplitude of the Fast Fourier Transform is a function of frequency. By selecting the component with the highest amplitude it is possible to produce a phase map at the corresponding frequency where the defect appears enhanced.
+In addition to the common technique for NDT \& E, Fast Fourier Transform in LIT~(\citet{wu1998lock}) is also one of the most applied techniques in IR Thermography, which is based on the periodic heating of the object being tested. A thermal wave is likewise generated and propagates inside the material. In real experimental cases the thermal wave is composed by a principal frequency and several harmonics where the amplitude of the Fast Fourier Transform is a function of frequency. By selecting the component with the highest amplitude it is possible to produce a phase map at the corresponding frequency where the defect appears enhanced.
 
 
 \subsection{ROC Curve analysis} % (fold)
 \label{sub:roc_curve_analysis}
-The Receiver operating characteristic (ROC) curve is a technique in statistics which helps visualize, organize and select classifiers based on their performance. The curve graph is created by plotting the the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings. More details about concepts and definitions can be found in \citet{Fawcett2006}. While being frequently chosen a standard method in several scientific fields, ROC are rarely applied in the thermographic field.\citet{Bison2014a} 
+The Receiver operating characteristic (ROC) curve is a technique in statistics which helps visualize, organize and select classifiers based on their performance. The curve graph is created by plotting the the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings. More details about concepts and definitions can be found in (\citet{Fawcett2006}). While being frequently chosen a standard method in several scientific fields, ROC are rarely applied in the thermographic field~(\citet{Bison2014a}). 
 
 Implemented in this study, a binary map of the defect locations is built and correlated to the post-processed images in gray scale, and the lay-out is provided in Figure~\ref{binary}.
 % \deleted [id=LL]{, and the lay-out is provided in Figure~\ref{binary}}. 
@@ -210,12 +213,12 @@ The main algorithm in the calculation of TPR and FPR is clarified as:
    \centering
    \subfloat[Binary map of defects]
    {
-      \includegraphics[scale=0.195]{chp3/Schema_done.png}
+      \includegraphics[scale=0.195]{chp5/Schema_done.png}
       \label{bin_map}
    }
    \subfloat[Cool map]
    {
-      \includegraphics[scale=0.8]{chp3/Cool_ROC.png}
+      \includegraphics[scale=0.8]{chp5/Cool_ROC.png}
       \label{cool_map}
    }   
    \caption{One example of ROC analysis (LN$_2$ results) and binary map of defect locations}
@@ -233,7 +236,7 @@ Figure~\ref{raw_results} illustrates the thermal raw images of PT and LN$_2$. Th
 % \begin{figure}[ht]
 %    \begin{center}
 %    % \begin{tabular}{c}
-%    \includegraphics[scale=0.60]{chp3/Raw_results.png}
+%    \includegraphics[scale=0.60]{chp5/Raw_results.png}
 %    % \\\footnotesize{(a) Binary map of defects} \hspace{4cm} \footnotesize{(b) Cool map}   
 %    % \end{tabular}  
 %    \end{center}
@@ -246,19 +249,19 @@ Figure~\ref{raw_results} illustrates the thermal raw images of PT and LN$_2$. Th
    \centering
    \subfloat[Flash raw frame 23]
    {
-      \includegraphics[scale=0.55]{chp3/flash_raw23_2.png}
+      \includegraphics[scale=0.55]{chp5/flash_raw23_2.png}
       \label{Flash_raw23}
    }
    \hspace{10pt}
    \subfloat[Flash raw frame 60]
    {
-      \includegraphics[scale=0.55]{chp3/flash_raw60_2.png}
+      \includegraphics[scale=0.55]{chp5/flash_raw60_2.png}
       \label{Flash_raw60}
    }
    \hspace{10pt}
    \subfloat[LN$_2$ raw frame 41]
    {
-      \includegraphics[scale=0.55]{chp3/cool_raw_2.png}
+      \includegraphics[scale=0.55]{chp5/cool_raw_2.png}
       \label{LN2_raw}
    }
    \caption{Thermal raw images of PT and LN$_2$ stimulation techniques}      
@@ -268,7 +271,7 @@ Figure~\ref{raw_results} illustrates the thermal raw images of PT and LN$_2$. Th
 % \begin{figure}[ht]
 %    \begin{center}
 %    % \begin{tabular}{c}
-%    \includegraphics[scale=0.6]{chp3/LIT_results.png}
+%    \includegraphics[scale=0.6]{chp5/LIT_results.png}
 %    % \\\footnotesize{(a) Binary map of defects} \hspace{4cm} \footnotesize{(b) Cool map}   
 %    % \end{tabular}  
 %    \end{center}
@@ -280,34 +283,34 @@ Figure~\ref{raw_results} illustrates the thermal raw images of PT and LN$_2$. Th
    \centering
    \subfloat[LIT4 FFT in amplitude]
    {
-      \includegraphics[scale=0.57]{chp3/LIT4_AMP.png}
+      \includegraphics[scale=0.57]{chp5/LIT4_AMP.png}
    }
    \hspace{10pt}
    \subfloat[LIT4 FFT in phase]
    {
-      \includegraphics[scale=0.57]{chp3/LIT4_PHA.png}
+      \includegraphics[scale=0.57]{chp5/LIT4_PHA.png}
    }
    \hspace{10pt}
    \subfloat[LIT8 FFT in amplitude]
    {
-      \includegraphics[scale=0.57]{chp3/LIT8_AMP.png}
+      \includegraphics[scale=0.57]{chp5/LIT8_AMP.png}
    }
    \hspace{10pt}
    \subfloat[LIT8 FFT in phase]
    {
-      \includegraphics[scale=0.57]{chp3/LIT8_PHA.png}
+      \includegraphics[scale=0.57]{chp5/LIT8_PHA.png}
       \label{LIT8_ph}
    }
    \hspace{10pt}
    \subfloat[LIT16 FFT in amplitude]
    {
-      \includegraphics[scale=0.57]{chp3/LIT16_AMP.png}
+      \includegraphics[scale=0.57]{chp5/LIT16_AMP.png}
       \label{LIT16_ph}
    }
    \hspace{10pt}
    \subfloat[LIT16 FFT in phase]
    {
-      \includegraphics[scale=0.57]{chp3/LIT16_PHA.png}
+      \includegraphics[scale=0.57]{chp5/LIT16_PHA.png}
    }
    \caption{FFT in amplitude and phase results for LIT}      
    \label{LIT_results}
@@ -330,7 +333,7 @@ Following PCT processing, figure~\ref{PCT_results} exhibits a clearer result. It
 % \begin{figure}[ht]
 %    \begin{center}
 %    % \begin{tabular}{c}
-%    \includegraphics[scale=0.6]{chp3/PCT_results.png}
+%    \includegraphics[scale=0.6]{chp5/PCT_results.png}
 %    % \\\footnotesize{(a) Binary map of defects} \hspace{4cm} \footnotesize{(b) Cool map}   
 %    % \end{tabular}  
 %    \end{center}
@@ -341,24 +344,24 @@ Following PCT processing, figure~\ref{PCT_results} exhibits a clearer result. It
 \begin{figure}[htpb]
     \centering
     \subfloat[Flash PCT 2nd Image]{
-      \includegraphics[scale=0.57]{chp3/Flash_PCT_2.png}
+      \includegraphics[scale=0.57]{chp5/Flash_PCT_2.png}
       \label{PCT_Flash}
       }
     \hspace{10pt}
     \subfloat[LN$_2$ PCT 2nd Image]{
-      \includegraphics[scale=0.57]{chp3/Cool_PCT_2.png}
+      \includegraphics[scale=0.57]{chp5/Cool_PCT_2.png}
       }
     \hspace{10pt}
     \subfloat[LIT4 PCT 3rd Image]{
-      \includegraphics[scale=0.57]{chp3/LIT4_PCT_3.png}
+      \includegraphics[scale=0.57]{chp5/LIT4_PCT_3.png}
       }    
     \\ %\hspace{10pt}
     \subfloat[LIT8 PCT 3rd Image]{
-      \includegraphics[scale=0.57]{chp3/LIT8_PCT_3.png}
+      \includegraphics[scale=0.57]{chp5/LIT8_PCT_3.png}
       }
     \hspace{10pt}
     \subfloat[LIT16 PCT 3rd Image]{
-      \includegraphics[scale=0.57]{chp3/LIT16_PCT_3.png}
+      \includegraphics[scale=0.57]{chp5/LIT16_PCT_3.png}
       }
     % \includegraphics[scale=0.4]{graph/LIT4_PCT_3.png}
     % \includegraphics[scale=0.4]{graph/LIT8_PCT_3.png}
@@ -381,7 +384,7 @@ Comparing the processed thermal images, the following observations can be made:
 The ROC curves obtained from comparing the binary map of defect locations to the above results are represented in Figure \ref{roc_pct} and ~\ref{ROC_curve}.
 \begin{figure}[htbp]
    \centering
-   \includegraphics[scale=0.7]{chp3/ROC_PCT_2017.pdf}
+   \includegraphics[scale=0.7]{chp5/ROC_PCT_2017.pdf}
    \caption{ROC curves for PCT processing results}
    \label{roc_pct}
 \end{figure}
@@ -390,7 +393,7 @@ The ROC curves obtained from comparing the binary map of defect locations to the
 %    % \centering
 %    \begin{center}
 %    \begin{tabular}{c}
-%    \includegraphics[scale=0.75]{chp3/ROC_LIT_results.png}
+%    \includegraphics[scale=0.75]{chp5/ROC_LIT_results.png}
 %    \\\footnotesize{(a) ROC from LIT FFT in amplitude results} \hspace{2.1cm} \footnotesize{(b)  ROC from LIT FFT in phase results}   
 %    \end{tabular}
 %    \end{center}  
@@ -402,19 +405,19 @@ The ROC curves obtained from comparing the binary map of defect locations to the
     \centering
     % \subfloat[ROC from PCT Results]
     % {
-    % \includegraphics[scale=0.75]{chp3/ROC_PCT_2017.pdf}
+    % \includegraphics[scale=0.75]{chp5/ROC_PCT_2017.pdf}
     % }
     % %\hspace{10pt}
     % \\
     \subfloat[ROC from LIT FFT in amplitude results]
     {
-    \includegraphics[scale=0.70]{chp3/ROC_LIT_AMP_2017.pdf}
+    \includegraphics[scale=0.70]{chp5/ROC_LIT_AMP_2017.pdf}
     \label{roc_amp}
     }
     \hspace{10pt}
     \subfloat[ROC from LIT FFT in phase results]
     {
-    \includegraphics[scale=0.70]{chp3/ROC_LIT_PHA_2017.pdf}
+    \includegraphics[scale=0.70]{chp5/ROC_LIT_PHA_2017.pdf}
     \label{roc_pha}
     }    
     \caption{ROC curves for LIT processing results}
@@ -434,7 +437,7 @@ Because of the reverse image problem, the result LIT8 presents a region (top-rig
 
 
 \subsection{Area under curve analysis and comparison}
-In ROC analysis, a common method to compare different classifiers is to calculate the area under the ROC curve, known as AUC.\citet{Fawcett2006} In this way, a single scalar value will represent the expected performance of the classifiers. As in the ROC curve profile, the AUC is a part of the unit square are, therefore, its value will be between 0 and 1. Thus, random guessing classifier produces a diagonal line between (0,0) and (1,1), which has an area of 0.5. It can be then indicated that a classifier AUC value less than 0.5 is even worse than a random guessing. 
+In ROC analysis, a common method to compare different classifiers is to calculate the area under the ROC curve, known as AUC~(\citet{Fawcett2006}). In this way, a single scalar value will represent the expected performance of the classifiers. As in the ROC curve profile, the AUC is a part of the unit square are, therefore, its value will be between 0 and 1. Thus, random guessing classifier produces a diagonal line between (0,0) and (1,1), which has an area of 0.5. It can be then indicated that a classifier AUC value less than 0.5 is even worse than a random guessing. 
 
 The corresponding AUC obtained from the above ROC curves is found in Tab. \ref{tab_auc}. Their comparison in form of the bar chart is illustrated in Fig. \ref{fig_auc}. A straight comparison shows that the Flash method with PCT second component has the highest AUC value of 0.9. The second one is the Liquid Nitrogen method, that is very close to the flash method with an AUC value of 0.87. At the bottom of the ranking, LIT4 with PCT third component and its amplitude one have the worst values as  0.67 and 0.65 respectively, which are just a bit better and a random guessing.
 On the contrary, LIT8 and LIT16 technique have a better result both in PCT processing and their amplitude images. This might be caused by the fact that during one period, 4 seconds of heating (LIT4) were not enough to penetrate the steel specimen deeply as those of 8 seconds (LIT8) and 16 seconds (LIT16). On the other hand, all the Lock-in Thermography techniques have similar AUC value in their phase images, which indicates that for phase image results, heating time does not make an effective influence in Lock-in Thermography in this study. Considering all these results, though the best approach is Flash technique with PCT processing, the LN$_2$ technique can be considered as a valid alternative method
@@ -476,7 +479,7 @@ On the contrary, LIT8 and LIT16 technique have a better result both in PCT proce
               
 \begin{figure}[htpb]
    \centering
-   \includegraphics[scale=0.48]{chp3/AUC.png}
+   \includegraphics[scale=0.48]{chp5/AUC.png}
    \caption{AUC value comparison}
    \label{fig_auc}
 \end{figure}
